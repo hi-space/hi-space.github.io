@@ -205,15 +205,29 @@ Pseudo-labeling과 consistency regularization을 결합한 방법. weak augmenta
 
 ## Entropy Minimization
 
-prediction probability의 confidence를 높이기 위해 사용한다. 주로 softmax temperature를 이용
+![](/assets/images/21-10-01-semi-supervised-learning-entropy-minimization.png)
 
-모델을 좀 더 confident 하게 학습하는 것이 목표이다. loss에 entropy minimization term 을 추가하여 학습한다.
+- Unlabeled data를 학습시킬 때 pseudo-labels을 그대로 사용하지 않고 entropy minimization 시켜준다.
+- unlabeled data의 hidden representation을 학습할 때, entropy가 다소 높다면 다른 클래스와의 decision boundary 주변에 feature vector가 위치할 (또는 그렇게 되도록 학습이 될) 가능성이 높고, 성능 저하를 불러일으킬 수 있습니다.
+- pseudo-label의 maximum softmax probability를 기준으로 사용
+- prediction probability의 confidence를 높이기 위해 사용한다. 주로 softmax temperature를 이용
+- 모델을 좀 더 confident 하게 학습하는 것이 목표이다. loss에 entropy minimization term 을 추가하여 학습한다.
 
 ## Mixup, Cutout, CutMix
 
 이미지에서 자주 사용되는 Regularization 방법으로, 간단하지만 높은 효과를 보이고 있다.
 
 ![](/assets/images/21-10-01-semi-supervised-learning-cutmix.png)
+
+# Sharpening Predictions
+
+unlabeled 데이터에 대한 모델의 예측이 평평하여 (over-flat) 학습이 잘 되지 않을 수 있다는 문제는 어떻게 해결하기 위해 세가지 방법을 소개한다. (Unsupervised Data Augmentation for Consistency Training 논문)
+
+- Confidence-based masking: 예측의 confidence가 낮은 unlabeled 데이터를 학습에 이용하지 않습니다.
+- Entropy minimization: augmented 데이터의 예측값이 낮은 entropy를 가지도록 (=예측이 더 sharp하도록) entropy objective term을 전체 objective에 추가합니다.
+- Softmax temperature controlling: unlabeled 데이터의 예측값을 계산할 때 1 미만의 softmax temperature를 적용하여 augmented 데이터의 타겟이 더 sharp해지도록 합니다.
+
+논문 저자에 따르면 labeled 데이터가 매우 적을 경우 confidence-based masking과 softmax temperature controlling이 유용하고, 상대적으로 labeled 데이터가 많은 경우 entropy minimization이 효과가 있다고 합니다.
 
 # Evaluation
 

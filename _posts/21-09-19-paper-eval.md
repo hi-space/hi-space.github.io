@@ -7,7 +7,9 @@ tags: paper 💡 🔥
 
 # deeplab v3+ (backbone: resnet101) 
 
-cityspcaes 데이터셋으로 학습된 deeplab v3+ (backbone: resnet101) 로 cityscapes 데이터셋에 대해 test
+## cityspcaes 데이터셋으로 학습된 deeplab v3+ (backbone: resnet101)
+
+### cityscapes 데이터셋에 대해 test
 
 ```sh
 python -u ./tools/eval.py \
@@ -60,6 +62,31 @@ python -u ./tools/eval.py \
 +------------+---------------+----------+
 |     18     |    bicycle    | 0.79189  |
 +------------+---------------+----------+
+```
+
+### gta5 데이터셋에 대해 test (TODO)
+
+```sh
+python -u ./tools/eval.py \
+    --config-file configs/gta5_deeplabv3_plus_resnet.yaml \
+    --input-img /home/yoo/data/cityscapes/leftImg8bit/test/ \
+    TEST.TEST_MODEL_PATH /home/yoo/workspace/SSL-Synthetic-Segmentation/seg/checkpoints/deeplabv3_plus_resnet101_segmentron.pth
+```
+
+```sh
+
+```
+
+### cyclegta 데이터셋에 대해 test (TODO)
+
+```sh
+python -u ./tools/eval.py \
+--config-file configs/gta_deeplabv3_plus_resnet.yaml \
+TEST.TEST_MODEL_PATH /home/yoo/workspace/SSL-Synthetic-Segmentation/seg/checkpoints/deeplabv3_plus_resnet101_segmentron.pth
+```
+
+```sh
+
 ```
 
 # AdaptSegNet
@@ -744,9 +771,10 @@ python -u ./tools/eval.py \
 - crop_size: 640x360
 - batch_size: 4
 - cyclegta + cityscapes
-- `loss = loss_seg1 + self.lambda_seg * loss_seg2` 로 수정
+- `loss = loss_seg1 + self.lambda_seg * loss_seg2` 로 수정 
 
 ```sh
+# epoch: 40000
 ===>road:       92.43
 ===>sidewalk:   54.89
 ===>building:   82.12
@@ -767,6 +795,28 @@ python -u ./tools/eval.py \
 ===>motocycle:  44.39
 ===>bicycle:    54.53
 ===> mIoU: 56.39
+
+# epoch: 20000
+===>road:       86.9
+===>sidewalk:   44.31
+===>building:   76.73
+===>wall:       22.51
+===>fence:      24.01
+===>pole:       30.15
+===>light:      33.86
+===>sign:       45.68
+===>vegetation: 82.93
+===>terrain:    40.57
+===>sky:        81.17
+===>person:     60.33
+===>rider:      36.59
+===>car:        81.39
+===>truck:      22.01
+===>bus:        40.91
+===>train:      26.94
+===>motocycle:  30.49
+===>bicycle:    52.01
+===> mIoU: 48.39
 ```
 
 ## Single + FixMatach 🔥
@@ -826,4 +876,32 @@ python -u ./tools/eval.py \
 ===>motocycle:  38.19
 ===>bicycle:    34.73
 ===> mIoU: 50.57
+```
+
+# 데이터셋 줄여가며
+
+### `Single + Cutmix real`에서 cityscapes 데이터셋 줄여가며 테스트
+
+```sh
+# citys 데이터: 1000 / epoch: 20000
+===>road:       89.8
+===>sidewalk:   47.83
+===>building:   78.08
+===>wall:       29.4
+===>fence:      26.01
+===>pole:       30.81
+===>light:      31.92
+===>sign:       44.57
+===>vegetation: 81.86
+===>terrain:    41.38
+===>sky:        78.27
+===>person:     61.61
+===>rider:      34.83
+===>car:        85.12
+===>truck:      27.93
+===>bus:        25.23
+===>train:      15.34
+===>motocycle:  30.78
+===>bicycle:    53.05
+===> mIoU: 48.1
 ```
