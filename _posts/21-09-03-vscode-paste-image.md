@@ -31,5 +31,5 @@ sudo apt install xclip
 
 # Reference
 
-- https://marketplace.visualstudio.com/items?itemName=mushan.vscode-paste-image
+- [https://marketplace.visualstudio.com/items?itemName=mushan.vscode-paste-image](https://marketplace.visualstudio.com/items?itemName=mushan.vscode-paste-image)
   

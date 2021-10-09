@@ -548,34 +548,66 @@ python -u ./tools/eval.py \
 ===> mIoU: 68.03
 ```
 
+### cityscapes_seg_d2000
+
+- epoch: 20000
+- crop_size: 640x360
+- batch_size: 2
+- cityscapes only (2000)
+- epoch 40000: 62.65
+
+```sh
+===>road:       95.13
+===>sidewalk:   66.19
+===>building:   79.77
+===>wall:       24.22
+===>fence:      36.12
+===>pole:       40.34
+===>light:      47.0
+===>sign:       57.51
+===>vegetation: 84.3
+===>terrain:    40.12
+===>sky:        86.49
+===>person:     63.95
+===>rider:      42.66
+===>car:        88.14
+===>truck:      50.63
+===>bus:        59.17
+===>train:      30.0
+===>motocycle:  32.06
+===>bicycle:    53.03
+===> mIoU: 56.68
+```
+
 ### cityscapes_seg_d1000
 
 - epoch: 20000
 - crop_size: 640x360
 - batch_size: 2
 - cityscapes only (1000)
+- epoch 40000: 62.65
 
 ```sh
-===>road:       94.48
-===>sidewalk:   65.91
-===>building:   85.16
-===>wall:       21.36
-===>fence:      27.94
-===>pole:       42.06
-===>light:      43.77
-===>sign:       60.85
-===>vegetation: 86.56
-===>terrain:    44.21
-===>sky:        86.98
-===>person:     65.96
-===>rider:      39.83
-===>car:        88.06
-===>truck:      42.92
-===>bus:        57.84
-===>train:      26.11
-===>motocycle:  37.0
-===>bicycle:    63.69
-===> mIoU: 56.88
+===>road:       93.94
+===>sidewalk:   63.72
+===>building:   85.84
+===>wall:       22.78
+===>fence:      30.39
+===>pole:       44.03
+===>light:      44.06
+===>sign:       63.5
+===>vegetation: 87.25
+===>terrain:    45.07
+===>sky:        85.2
+===>person:     67.04
+===>rider:      47.62
+===>car:        88.86
+===>truck:      47.17
+===>bus:        63.05
+===>train:      34.67
+===>motocycle:  41.64
+===>bicycle:    62.65
+===> mIoU: 58.87
 ```
 
 ### cityscapes_seg_d500
@@ -584,6 +616,7 @@ python -u ./tools/eval.py \
 - crop_size: 640x360
 - batch_size: 2
 - cityscapes only (500)
+- epoch 40000: 62.65
 
 ```sh
 ===>road:       94.48
@@ -640,6 +673,8 @@ python -u ./tools/eval.py \
 
 # Seg-Uncertanity -> Single Segmentation
 
+## Basic
+
 - epoch: 45000
 - crop_size: 640x360
 - batch_size: 4
@@ -669,4 +704,126 @@ python -u ./tools/eval.py \
 ===>motocycle:  26.9
 ===>bicycle:    42.08
 ===> mIoU: 42.9
+```
+
+## Single + Cutmix
+
+- epoch: 40000
+- crop_size: 640x360
+- batch_size: 4
+- cyclegta + cityscapes
+- epoch 30000: 49.16
+- ?? `loss = loss_seg1 + self.lambda_seg * loss_seg2` 라고 써야 cutmix loss도 들어가는데 `loss = loss_seg1 + self.lambda_seg * loss_seg1` 이렇게 하고 돌렸다? 그런데 성능이 좋았다?
+
+```sh
+===>road:       93.32
+===>sidewalk:   58.31
+===>building:   81.48
+===>wall:       40.99
+===>fence:      34.11
+===>pole:       33.84
+===>light:      36.54
+===>sign:       49.44
+===>vegetation: 84.32
+===>terrain:    46.8
+===>sky:        83.16
+===>person:     64.4
+===>rider:      42.62
+===>car:        87.52
+===>truck:      50.54
+===>bus:        58.01
+===>train:      31.75
+===>motocycle:  37.83
+===>bicycle:    52.8
+===> mIoU: 56.2
+```
+
+## Single + Cutmix real 🔥 ⭐️
+
+- epoch: 40000
+- crop_size: 640x360
+- batch_size: 4
+- cyclegta + cityscapes
+- `loss = loss_seg1 + self.lambda_seg * loss_seg2` 로 수정
+
+```sh
+===>road:       92.43
+===>sidewalk:   54.89
+===>building:   82.12
+===>wall:       39.52
+===>fence:      33.87
+===>pole:       34.49
+===>light:      34.27
+===>sign:       46.34
+===>vegetation: 83.99
+===>terrain:    45.93
+===>sky:        84.47
+===>person:     65.3
+===>rider:      40.97
+===>car:        88.18
+===>truck:      50.24
+===>bus:        57.5
+===>train:      38.0
+===>motocycle:  44.39
+===>bicycle:    54.53
+===> mIoU: 56.39
+```
+
+## Single + FixMatach 🔥
+
+- epoch: 30000
+- crop_size: 640x360
+- batch_size: 4
+- cyclegta + cityscapes
+
+```sh
+===>road:       65.91
+===>sidewalk:   10.96
+===>building:   36.6
+===>wall:       9.87
+===>fence:      15.78
+===>pole:       23.15
+===>light:      25.58
+===>sign:       16.91
+===>vegetation: 4.13
+===>terrain:    28.15
+===>sky:        16.59
+===>person:     31.05
+===>rider:      13.15
+===>car:        27.33
+===>truck:      9.77
+===>bus:        7.84
+===>train:      0.01
+===>motocycle:  22.81
+===>bicycle:    19.21
+===> mIoU: 20.25
+```
+
+---
+
+# Pseudo Label
+
+### `Single + Cutmix real` (mIou: 56.39)로 pseudo labeling
+
+```sh
+===>road:       92.14
+===>sidewalk:   57.04
+===>building:   76.98
+===>wall:       34.39
+===>fence:      30.71
+===>pole:       21.46
+===>light:      24.55
+===>sign:       28.98
+===>vegetation: 78.14
+===>terrain:    53.26
+===>sky:        84.79
+===>person:     54.98
+===>rider:      26.94
+===>car:        83.78
+===>truck:      48.48
+===>bus:        54.27
+===>train:      36.96
+===>motocycle:  38.19
+===>bicycle:    34.73
+===> mIoU: 50.57
 ```
