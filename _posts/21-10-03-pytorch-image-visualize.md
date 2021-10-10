@@ -57,6 +57,31 @@ plt.pause(0.001)
 
 `make_grid` 함수가 Tensor를 List로 받을 수도 있지만 matplot의 figure를 사용해 따로 출력해줄 수도 있다.
 
+## Prediction visualize
+
+```python
+import json
+devkit_dir = 'dataset/cityscapes_list'
+with open(devkit_dir+'/info.json', 'r') as fp:
+    info = json.load(fp)
+num_classes = np.int(info['classes'])
+name_classes = np.array(info['label'], dtype=np.str)
+self.mapping = np.array(info['label2train'], dtype=np.int)
+
+def label_mapping(self, input, mapping):
+    output = np.copy(input)
+    for ind in range(len(mapping)):
+        output[input == mapping[ind][0]] = mapping[ind][1]
+    return np.array(output, dtype=np.int64)
+    
+val_pred = self.model(images_v)
+val_pred = self.interp(val_pred)
+val_loss = self.seg_loss(val_pred, labels_v)
+
+pred = torch.argmax(val_pred, 1).squeeze(0).cpu().data.numpy()
+mask = self.label_mapping(pred, self.mapping)
+```
+
 ## Troubleshooting
 
 ```

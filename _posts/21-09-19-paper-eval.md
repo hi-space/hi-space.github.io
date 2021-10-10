@@ -819,7 +819,7 @@ TEST.TEST_MODEL_PATH /home/yoo/workspace/SSL-Synthetic-Segmentation/seg/checkpoi
 ===> mIoU: 48.39
 ```
 
-## Single + FixMatach 🔥
+## Single + FixMatach
 
 - epoch: 30000
 - crop_size: 640x360
@@ -853,8 +853,12 @@ TEST.TEST_MODEL_PATH /home/yoo/workspace/SSL-Synthetic-Segmentation/seg/checkpoi
 
 # Pseudo Label
 
-### `Single + Cutmix real` (mIou: 56.39)로 pseudo labeling
+- train 데이터에 대해 pseudo labeling 한 후 GT 데이터와 mIoU 비교
 
+### default pseudo labeling
+
+- single_cutmix_real로 pseudo labeling evaluation
+  
 ```sh
 ===>road:       92.14
 ===>sidewalk:   57.04
@@ -876,6 +880,104 @@ TEST.TEST_MODEL_PATH /home/yoo/workspace/SSL-Synthetic-Segmentation/seg/checkpoi
 ===>motocycle:  38.19
 ===>bicycle:    34.73
 ===> mIoU: 50.57
+```
+
+# Pseudo Labeled 데이터 training
+
+- `Single + Cutmix real` (mIou: 56.39) 모델을 restore 한 후 pseudo labeling 한 cityscapes 데이터로 fine-tuning
+- `aagc_640x360_b2_single_cutmix_student`
+
+### cityscapes GT 데이터로 pseudo labeling한 데이터
+
+```sh
+# python eval_single.py \
+#   --restore-from ./snapshots/aagc_640x360_b2_single_cutmix_student/CITYS_10000.pth
+===>road:       96.13
+===>sidewalk:   72.72
+===>building:   88.12
+===>wall:       44.52
+===>fence:      45.92
+===>pole:       42.66
+===>light:      50.69
+===>sign:       62.97
+===>vegetation: 88.65
+===>terrain:    55.41
+===>sky:        88.4
+===>person:     70.26
+===>rider:      50.67
+===>car:        90.81
+===>truck:      73.5
+===>bus:        70.26
+===>train:      48.25
+===>motocycle:  53.44
+===>bicycle:    67.64
+===> mIoU: 66.37
+```
+
+### single cutmix real 데이터로 pseudo labeling 한 데이터
+
+- `aagc_640x360_b2_single_cutmix_real/GTA5_40000.pth` 로 pseudo labeling 한 데이터 사용
+- train 데이터셋에 pseudo labeling 했을 때 mIoU가 50.57
+
+```sh
+ㅠㅠ  mIoU 1정도 나오려나 완전망
+```
+
+### single cutmix real 데이터에서 confidenc(> 0.5) 데이터만 pseudo labeling
+
+- `output_batch[score_batch<0.5] = 255`
+- 
+
+# Fine-tuning
+
+- `aagc_640x360_b2_single_cutmix_real/GTA5_40000.pth` restore (mIoU: 56.39)
+- cutmix augmentation 없이 GTA->Cityscapes adaptation 수행
+- 당연한 말이지만 GTA5 도메인 knowledge가 들어가다보니 더 안좋아짐
+
+```sh
+# epoch: 10000
+===>road:       81.66
+===>sidewalk:   33.48
+===>building:   81.06
+===>wall:       22.77
+===>fence:      25.27
+===>pole:       34.12
+===>light:      33.37
+===>sign:       47.24
+===>vegetation: 78.56
+===>terrain:    33.18
+===>sky:        71.27
+===>person:     58.23
+===>rider:      34.19
+===>car:        85.59
+===>truck:      44.36
+===>bus:        40.0
+===>train:      21.35
+===>motocycle:  34.31
+===>bicycle:    58.29
+===> mIoU: 48.33
+
+# epoch: 5000
+===>road:       86.1
+===>sidewalk:   41.23
+===>building:   82.22
+===>wall:       36.04
+===>fence:      33.22
+===>pole:       33.04
+===>light:      34.9
+===>sign:       52.01
+===>vegetation: 82.35
+===>terrain:    39.65
+===>sky:        78.72
+===>person:     61.45
+===>rider:      40.96
+===>car:        85.47
+===>truck:      31.27
+===>bus:        46.43
+===>train:      33.82
+===>motocycle:  33.28
+===>bicycle:    60.09
+===> mIoU: 52.22
 ```
 
 # 데이터셋 줄여가며
@@ -904,4 +1006,75 @@ TEST.TEST_MODEL_PATH /home/yoo/workspace/SSL-Synthetic-Segmentation/seg/checkpoi
 ===>motocycle:  30.78
 ===>bicycle:    53.05
 ===> mIoU: 48.1
+```
+
+```sh
+# citys 데이터: 500 / epoch: 20000
+===>road:       90.45
+===>sidewalk:   51.56
+===>building:   80.4
+===>wall:       24.29
+===>fence:      25.14
+===>pole:       35.54
+===>light:      33.18
+===>sign:       48.83
+===>vegetation: 83.67
+===>terrain:    42.52
+===>sky:        76.34
+===>person:     58.22
+===>rider:      34.15
+===>car:        83.41
+===>truck:      34.51
+===>bus:        31.2
+===>train:      24.78
+===>motocycle:  32.29
+===>bicycle:    56.12
+===> mIoU: 49.82
+
+# citys 데이터: 500 / epoch: 30000
+===>road:       92.46
+===>sidewalk:   53.44
+===>building:   78.69
+===>wall:       30.76
+===>fence:      27.1
+===>pole:       31.71
+===>light:      29.52
+===>sign:       49.72
+===>vegetation: 83.57
+===>terrain:    44.49
+===>sky:        79.31
+===>person:     61.18
+===>rider:      36.39
+===>car:        86.28
+===>truck:      36.23
+===>bus:        44.9
+===>train:      34.16
+===>motocycle:  32.62
+===>bicycle:    47.8
+===> mIoU: 51.6
+```
+
+```sh
+# aagc_640x360_b2_single_cutmix_real_d100
+# citys 데이터: 100 / epoch: 20000
+===>road:       87.59
+===>sidewalk:   46.34
+===>building:   77.33
+===>wall:       24.46
+===>fence:      22.95
+===>pole:       29.49
+===>light:      30.65
+===>sign:       44.55
+===>vegetation: 82.1
+===>terrain:    41.03
+===>sky:        79.09
+===>person:     61.43
+===>rider:      33.66
+===>car:        80.4
+===>truck:      15.16
+===>bus:        38.37
+===>train:      0.01
+===>motocycle:  23.69
+===>bicycle:    55.05
+===> mIoU: 45.97
 ```

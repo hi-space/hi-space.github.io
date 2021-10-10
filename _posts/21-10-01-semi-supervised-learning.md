@@ -19,7 +19,7 @@ Semi-supervised learning 은 소량의 labeled 데이터를 사용한 학습 방
 ![](/assets/images/21-10-01-semi-supervised-learning-semi-supervised-learning.png)
 
 - **Generative Models**: Gaussian Mixture, Deep Generative Model
-- **Graph Based**: Label Propagation
+- **Graph Based**: Label Propagation (이웃이 많이 속한 label이 내 label)
 - **Self-Training**: Self-Training, Co-Training
 - **Consistency Regularization**: Pi-Model, Mean Teacher
 

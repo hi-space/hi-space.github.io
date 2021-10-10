@@ -18,6 +18,12 @@ key: page-about-detail
 
 #### _2021/09 -_ 　　　　　　　 Intelligence Research, Kakao Mobility
 
+## Presentations
+
+#### SAPY
+
+#### CJU
+
 ## Projects
 
 #### Serving Robot  　　　　　　　　　　　　　　　 <sub><sup>_2021/02 - 2021/09_ </sup></sub>
@@ -27,8 +33,6 @@ key: page-about-detail
 #### Simulation for Autonomous-driving Car 　　　　 <sub><sup>_2017/09 - 2018/06_ </sup></sub>
 #### 3D Indoor Scanner & VR Home Furnishing  　　　<sub><sup>_2016/01 - 2017/03_ </sup></sub>
 #### Autonomous-driving Bicycle 　　　　　　　　　<sub><sup>_2014/01 - 2014/12_ </sup></sub>
-
----
 
 # Contacts
 
