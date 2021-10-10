@@ -173,8 +173,8 @@ input {
 }
 
 // mathjax
-.mjx-chtml {
-  overflow: auto;
+.mjx-math {
+  white-space: normal;
 }
 
 ::-webkit-scrollbar {
