@@ -172,6 +172,11 @@ input {
   display: none;
 }
 
+// mathjax
+.mjx-chtml {
+  overflow: auto;
+}
+
 ::-webkit-scrollbar {
   width: 4px;
   height: 4px;
