@@ -7,16 +7,16 @@ function smoothScroll() {
     var int = setInterval(function () {
         window.scrollTo(0, currentY);
 
-        if (currentY > 500) {
-            currentY -= 70;
+        if (currentY > 300) {
+            currentY -= 500;
         } else if (currentY > 100) {
-            currentY -= 50;
+            currentY -= 600;
         } else {
-            currentY -= 10;
+            currentY -= 200;
         }
 
         if (currentY <= 0) clearInterval(int);
-    }, 1000 / 60); // 60fps
+    }, 300 / 60); // 60fps
 }
 
 function scrollToTop() {

@@ -53,19 +53,27 @@ pre.highlight {
 
 // scrool to top
 #scroll-to-top {
-    width: 45px;
-    height: 45px;
-    cursor: pointer;
-    display: block;
-    position: fixed;
-    font-size: 15px;
-    color: rgba($text-color-3, 0.7);
+    @media (hover: hover) {
+        &:hover {
+            color: white;
+            background-color: rgba($main-color-1, 0.5);
+        }
+    }
+    width: 40px;
+    height: 40px;
     border-radius: 50%;
+    position: fixed;
     padding: 10px;
     bottom: 3%;
     right: 5%;
+    display: inline-block;
+    cursor: pointer;
+    font-size: 15px;
+    text-align: center;
+    text-decoration: none;
+    color: rgba($text-color-3, 0.7);
+    background-color: rgba($main-color-3, 0.5);
     z-index: 10;
-    background-color: rgba($main-color-3, 0.8);
     transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
 }
 /* end custom scss snippet */
