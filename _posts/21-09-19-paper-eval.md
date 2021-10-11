@@ -64,31 +64,6 @@ python -u ./tools/eval.py \
 +------------+---------------+----------+
 ```
 
-### gta5 데이터셋에 대해 test (TODO)
-
-```sh
-python -u ./tools/eval.py \
-    --config-file configs/gta5_deeplabv3_plus_resnet.yaml \
-    --input-img /home/yoo/data/cityscapes/leftImg8bit/test/ \
-    TEST.TEST_MODEL_PATH /home/yoo/workspace/SSL-Synthetic-Segmentation/seg/checkpoints/deeplabv3_plus_resnet101_segmentron.pth
-```
-
-```sh
-
-```
-
-### cyclegta 데이터셋에 대해 test (TODO)
-
-```sh
-python -u ./tools/eval.py \
---config-file configs/gta_deeplabv3_plus_resnet.yaml \
-TEST.TEST_MODEL_PATH /home/yoo/workspace/SSL-Synthetic-Segmentation/seg/checkpoints/deeplabv3_plus_resnet101_segmentron.pth
-```
-
-```sh
-
-```
-
 # AdaptSegNet
 
 ### multi_640x360_lsgan_b2 
@@ -566,9 +541,31 @@ TEST.TEST_MODEL_PATH /home/yoo/workspace/SSL-Synthetic-Segmentation/seg/checkpoi
 ===>motocycle:  21.81
 ===>bicycle:    34.99
 ===> mIoU: 37.94
+
+# evalute gta
+===>road:       82.31
+===>sidewalk:   58.06
+===>building:   67.56
+===>wall:       28.42
+===>fence:      20.55
+===>pole:       34.71
+===>light:      38.74
+===>sign:       29.73
+===>vegetation: 69.36
+===>terrain:    41.36
+===>sky:        71.25
+===>person:     64.42
+===>rider:      25.2
+===>car:        65.62
+===>truck:      59.31
+===>bus:        70.06
+===>train:      0.0
+===>motocycle:  31.92
+===>bicycle:    18.74
+===> mIoU: 46.18
 ```
 
-# Segmentation 모델만 target 데이터셋 줄여가며 성능 테스트
+# Cityscapes로 SL
 
 - 기존 사용하던 모델에서 discriminative 모델들을 제거하고 segmentation 모델로만 학습 진행
 - SL의 경우 데이터셋이 줄어듦에 따라 성능이 급격히 저하되는 것을 확인
@@ -582,6 +579,7 @@ TEST.TEST_MODEL_PATH /home/yoo/workspace/SSL-Synthetic-Segmentation/seg/checkpoi
 - cityscapes only (2975)
 
 ```sh
+# epoch 20000
 ===>road:       96.45
 ===>sidewalk:   72.46
 ===>building:   88.62
@@ -602,6 +600,9 @@ TEST.TEST_MODEL_PATH /home/yoo/workspace/SSL-Synthetic-Segmentation/seg/checkpoi
 ===>motocycle:  49.47
 ===>bicycle:    67.58
 ===> mIoU: 68.03
+
+# epoch 30000
+===> mIoU: 69.12
 ```
 
 ### cityscapes_seg_d2000
@@ -613,6 +614,7 @@ TEST.TEST_MODEL_PATH /home/yoo/workspace/SSL-Synthetic-Segmentation/seg/checkpoi
 - epoch 40000: 62.65
 
 ```sh
+# epoch: 20000
 ===>road:       95.13
 ===>sidewalk:   66.19
 ===>building:   79.77
@@ -633,6 +635,31 @@ TEST.TEST_MODEL_PATH /home/yoo/workspace/SSL-Synthetic-Segmentation/seg/checkpoi
 ===>motocycle:  32.06
 ===>bicycle:    53.03
 ===> mIoU: 56.68
+
+# epoch: 40000
+===> mIoU: 62.65
+
+# epoch: 50000
+===>road:       93.59
+===>sidewalk:   62.57
+===>building:   86.22
+===>wall:       20.05
+===>fence:      40.85
+===>pole:       44.38
+===>light:      54.17
+===>sign:       66.44
+===>vegetation: 87.07
+===>terrain:    45.34
+===>sky:        88.89
+===>person:     70.72
+===>rider:      50.25
+===>car:        89.91
+===>truck:      61.84
+===>bus:        66.02
+===>train:      32.37
+===>motocycle:  37.84
+===>bicycle:    59.75
+===> mIoU: 60.96
 ```
 
 ### cityscapes_seg_d1000
@@ -644,6 +671,7 @@ TEST.TEST_MODEL_PATH /home/yoo/workspace/SSL-Synthetic-Segmentation/seg/checkpoi
 - epoch 40000: 62.65
 
 ```sh
+# epoch: 20000
 ===>road:       93.94
 ===>sidewalk:   63.72
 ===>building:   85.84
@@ -664,6 +692,75 @@ TEST.TEST_MODEL_PATH /home/yoo/workspace/SSL-Synthetic-Segmentation/seg/checkpoi
 ===>motocycle:  41.64
 ===>bicycle:    62.65
 ===> mIoU: 58.87
+
+# epoch: 30000
+===>road:       95.62
+===>sidewalk:   69.94
+===>building:   87.4
+===>wall:       26.95
+===>fence:      35.26
+===>pole:       45.72
+===>light:      52.08
+===>sign:       63.43
+===>vegetation: 87.86
+===>terrain:    47.86
+===>sky:        88.32
+===>person:     69.04
+===>rider:      47.52
+===>car:        89.4
+===>truck:      49.46
+===>bus:        60.76
+===>train:      37.69
+===>motocycle:  42.02
+===>bicycle:    66.49
+===> mIoU: 61.2
+
+# epoch 40000
+===> mIoU: 62.65
+
+# epoch 50000
+===>road:       94.18
+===>sidewalk:   66.03
+===>building:   86.9
+===>wall:       26.54
+===>fence:      34.62
+===>pole:       44.54
+===>light:      47.52
+===>sign:       64.1
+===>vegetation: 87.2
+===>terrain:    48.69
+===>sky:        87.78
+===>person:     68.34
+===>rider:      48.39
+===>car:        89.4
+===>truck:      50.46
+===>bus:        64.23
+===>train:      35.43
+===>motocycle:  42.02
+===>bicycle:    62.92
+===> mIoU: 60.49
+
+# epoch: 60000
+===>road:       93.09
+===>sidewalk:   62.36
+===>building:   87.05
+===>wall:       27.34
+===>fence:      34.08
+===>pole:       45.32
+===>light:      48.7
+===>sign:       64.29
+===>vegetation: 87.22
+===>terrain:    46.12
+===>sky:        88.96
+===>person:     69.62
+===>rider:      47.67
+===>car:        90.2
+===>truck:      52.06
+===>bus:        66.68
+===>train:      35.18
+===>motocycle:  37.88
+===>bicycle:    65.37
+===> mIoU: 60.48
 ```
 
 ### cityscapes_seg_d500
@@ -675,6 +772,7 @@ TEST.TEST_MODEL_PATH /home/yoo/workspace/SSL-Synthetic-Segmentation/seg/checkpoi
 - epoch 40000: 62.65
 
 ```sh
+# epoch 20000
 ===>road:       94.48
 ===>sidewalk:   63.33
 ===>building:   85.77
@@ -695,6 +793,12 @@ TEST.TEST_MODEL_PATH /home/yoo/workspace/SSL-Synthetic-Segmentation/seg/checkpoi
 ===>motocycle:  33.0
 ===>bicycle:    64.02
 ===> mIoU: 55.35
+
+# epoch 30000
+[TODO]
+
+# epoch 40000
+===> mIoU: 62.65
 ```
 
 ### cityscapes_seg_d100
@@ -705,28 +809,6 @@ TEST.TEST_MODEL_PATH /home/yoo/workspace/SSL-Synthetic-Segmentation/seg/checkpoi
 - cityscapes only (100)
 
 ```sh
-# epoch 40000
-===>road:       92.71
-===>sidewalk:   57.45
-===>building:   79.52
-===>wall:       5.33
-===>fence:      9.65
-===>pole:       36.37
-===>light:      6.09
-===>sign:       46.04
-===>vegetation: 84.59
-===>terrain:    28.44
-===>sky:        82.21
-===>person:     59.98
-===>rider:      0.67
-===>car:        86.96
-===>truck:      0.05
-===>bus:        44.63
-===>train:      0.0
-===>motocycle:  11.86
-===>bicycle:    58.43
-===> mIoU: 41.63
-
 # epoch 20000
 ===>road:       92.62
 ===>sidewalk:   56.93
@@ -748,6 +830,50 @@ TEST.TEST_MODEL_PATH /home/yoo/workspace/SSL-Synthetic-Segmentation/seg/checkpoi
 ===>motocycle:  10.89
 ===>bicycle:    59.52
 ===> mIoU: 40.5
+
+# epoch 30000
+===>road:	93.49
+===>sidewalk:	59.13
+===>building:	79.59
+===>wall:	6.35
+===>fence:	11.63
+===>pole:	34.5
+===>light:	6.84
+===>sign:	43.09
+===>vegetation:	84.46
+===>terrain:	29.45
+===>sky:	81.7
+===>person:	59.33
+===>rider:	1.19
+===>car:	87.26
+===>truck:	0.03
+===>bus:	47.25
+===>train:	0.0
+===>motocycle:	14.91
+===>bicycle:	58.77
+===> mIoU: 42.05
+
+# epoch 40000
+===>road:       92.71
+===>sidewalk:   57.45
+===>building:   79.52
+===>wall:       5.33
+===>fence:      9.65
+===>pole:       36.37
+===>light:      6.09
+===>sign:       46.04
+===>vegetation: 84.59
+===>terrain:    28.44
+===>sky:        82.21
+===>person:     59.98
+===>rider:      0.67
+===>car:        86.96
+===>truck:      0.05
+===>bus:        44.63
+===>train:      0.0
+===>motocycle:  11.86
+===>bicycle:    58.43
+===> mIoU: 41.63
 ```
 
 # Seg-Uncertanity -> Single Segmentation
@@ -817,7 +943,7 @@ TEST.TEST_MODEL_PATH /home/yoo/workspace/SSL-Synthetic-Segmentation/seg/checkpoi
 ===> mIoU: 56.2
 ```
 
-## Single + Cutmix real 🔥 ⭐️
+## Single + Cutmix real 🔥 ⭐️(HOT)
 
 - epoch: 40000
 - crop_size: 640x360
@@ -826,28 +952,6 @@ TEST.TEST_MODEL_PATH /home/yoo/workspace/SSL-Synthetic-Segmentation/seg/checkpoi
 - `loss = loss_seg1 + self.lambda_seg * loss_seg2` 로 수정 
 
 ```sh
-# epoch: 40000
-===>road:       92.43
-===>sidewalk:   54.89
-===>building:   82.12
-===>wall:       39.52
-===>fence:      33.87
-===>pole:       34.49
-===>light:      34.27
-===>sign:       46.34
-===>vegetation: 83.99
-===>terrain:    45.93
-===>sky:        84.47
-===>person:     65.3
-===>rider:      40.97
-===>car:        88.18
-===>truck:      50.24
-===>bus:        57.5
-===>train:      38.0
-===>motocycle:  44.39
-===>bicycle:    54.53
-===> mIoU: 56.39
-
 # epoch: 20000
 ===>road:       86.9
 ===>sidewalk:   44.31
@@ -869,6 +973,50 @@ TEST.TEST_MODEL_PATH /home/yoo/workspace/SSL-Synthetic-Segmentation/seg/checkpoi
 ===>motocycle:  30.49
 ===>bicycle:    52.01
 ===> mIoU: 48.39
+
+# epoch: 30000
+===>road:       92.38
+===>sidewalk:   51.5
+===>building:   80.9
+===>wall:       30.71
+===>fence:      31.94
+===>pole:       34.41
+===>light:      38.27
+===>sign:       46.27
+===>vegetation: 84.69
+===>terrain:    44.82
+===>sky:        84.75
+===>person:     63.36
+===>rider:      39.7
+===>car:        87.18
+===>truck:      44.62
+===>bus:        48.96
+===>train:      34.9
+===>motocycle:  38.77
+===>bicycle:    49.64
+===> mIoU: 54.09
+
+# epoch: 40000
+===>road:       92.43
+===>sidewalk:   54.89
+===>building:   82.12
+===>wall:       39.52
+===>fence:      33.87
+===>pole:       34.49
+===>light:      34.27
+===>sign:       46.34
+===>vegetation: 83.99
+===>terrain:    45.93
+===>sky:        84.47
+===>person:     65.3
+===>rider:      40.97
+===>car:        88.18
+===>truck:      50.24
+===>bus:        57.5
+===>train:      38.0
+===>motocycle:  44.39
+===>bicycle:    54.53
+===> mIoU: 56.39
 ```
 
 ## Single + FixMatach
@@ -1082,6 +1230,28 @@ TEST.TEST_MODEL_PATH /home/yoo/workspace/SSL-Synthetic-Segmentation/seg/checkpoi
 ===>motocycle:  28.51
 ===>bicycle:    57.53
 ===> mIoU: 49.26
+
+# citys 데이터: 1000 / epoch: 40000
+===>road:       91.15
+===>sidewalk:   51.66
+===>building:   80.5
+===>wall:       30.23
+===>fence:      27.59
+===>pole:       32.74
+===>light:      37.92
+===>sign:       52.5
+===>vegetation: 83.46
+===>terrain:    44.88
+===>sky:        76.23
+===>person:     62.98
+===>rider:      39.62
+===>car:        87.27
+===>truck:      35.43
+===>bus:        40.11
+===>train:      13.43
+===>motocycle:  37.89
+===>bicycle:    60.96
+===> mIoU: 51.92
 ```
 
 #### aagc_640x360_b2_single_cutmix_real_d500
@@ -1108,6 +1278,28 @@ TEST.TEST_MODEL_PATH /home/yoo/workspace/SSL-Synthetic-Segmentation/seg/checkpoi
 ===>motocycle:  32.29
 ===>bicycle:    56.12
 ===> mIoU: 49.82
+
+# citys 데이터: 500 / epoch: 30000
+===>road:       92.46
+===>sidewalk:   53.44
+===>building:   78.69
+===>wall:       30.76
+===>fence:      27.1
+===>pole:       31.71
+===>light:      29.52
+===>sign:       49.72
+===>vegetation: 83.57
+===>terrain:    44.49
+===>sky:        79.31
+===>person:     61.18
+===>rider:      36.39
+===>car:        86.28
+===>truck:      36.23
+===>bus:        44.9
+===>train:      34.16
+===>motocycle:  32.62
+===>bicycle:    47.8
+===> mIoU: 51.6
 
 # citys 데이터: 500 / epoch: 40000
 ===>road:       89.81
@@ -1158,6 +1350,28 @@ TEST.TEST_MODEL_PATH /home/yoo/workspace/SSL-Synthetic-Segmentation/seg/checkpoi
 ===>motocycle:  23.69
 ===>bicycle:    55.05
 ===> mIoU: 45.97
+
+# epoch: 30000
+===>road:       91.63
+===>sidewalk:   47.05
+===>building:   80.44
+===>wall:       27.6
+===>fence:      23.25
+===>pole:       35.03
+===>light:      34.43
+===>sign:       47.39
+===>vegetation: 83.45
+===>terrain:    40.35
+===>sky:        77.79
+===>person:     57.2
+===>rider:      23.15
+===>car:        84.85
+===>truck:      27.75
+===>bus:        41.25
+===>train:      10.77
+===>motocycle:  27.35
+===>bicycle:    57.92
+===> mIoU: 48.35
 
 # epoch:40000
 ===>road:       91.54
