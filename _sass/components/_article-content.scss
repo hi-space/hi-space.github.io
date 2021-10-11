@@ -97,10 +97,10 @@
   
   pre {
     margin: 0;
-    @include overflow(auto);
+    @include overflowHoverOnly();
     
     & > code {
-      overflow: auto;
+      @include overflowHoverOnly();
       padding: 0;
       word-wrap: normal;
       background-color: transparent;
@@ -192,7 +192,7 @@
               @include flexbox;
               & > .code {
                 padding: 0 0 map-get($spacers, 3) map-get($spacers, 2);
-                @include overflow(auto);
+                @include overflowHoverOnly();
               }
             }
           }
@@ -204,7 +204,7 @@
               display: block;
               margin: 0;
               border-radius: 0;
-              @include overflow(auto);
+              @include overflowHoverOnly();
               &.lineno {
                 color: $text-color-l;
                 @include user-select(none);
@@ -261,7 +261,7 @@
     display: block;
     width: 100%;
     border-collapse: collapse;
-    @include overflow(auto);
+    @include overflowHoverOnly();
     thead, tfoot {
       background-color: $text-background-color;
     }

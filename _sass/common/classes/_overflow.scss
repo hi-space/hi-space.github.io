@@ -17,6 +17,51 @@
   }
 }
 
+@mixin overflowHoverOnly() {
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+
+  // &::-webkit-scrollbar {
+  //   width: 4px;
+  //   height: 4px;
+  //   background-color: transparent;
+  // }
+  // &::-webkit-scrollbar-thumb {
+  //   border-radius: 30px;
+  //   background-color: transparent;
+  // }
+
+  // &::-webkit-scrollbar-track {
+  //   border-radius: 30px;
+  //   background-color: rgba($main-color-1, .05);
+  // }
+
+  transition: 1s;
+
+  &:hover,
+  &:focus {
+    &::-webkit-scrollbar {
+      width: 4px;
+      height: 4px;
+      background-color: rgba($main-color-1, .1);
+    }
+    &::-webkit-scrollbar-thumb {
+      border-radius: 30px;
+      background-color: rgba($main-color-1, .3);
+    }
+
+    &::-webkit-scrollbar-thumb:hover {
+      border-radius: 30px;
+      background-color: rgba($main-color-1, .9);
+    }
+
+    &::-webkit-scrollbar-track {
+      border-radius: 30px;
+      background-color: rgba($main-color-1, .1);
+    }
+  }
+}
+
 .of-auto {
   @include overflow(auto);
 }
