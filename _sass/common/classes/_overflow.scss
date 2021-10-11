@@ -21,21 +21,6 @@
   overflow: auto;
   -webkit-overflow-scrolling: touch;
 
-  // &::-webkit-scrollbar {
-  //   width: 4px;
-  //   height: 4px;
-  //   background-color: transparent;
-  // }
-  // &::-webkit-scrollbar-thumb {
-  //   border-radius: 30px;
-  //   background-color: transparent;
-  // }
-
-  // &::-webkit-scrollbar-track {
-  //   border-radius: 30px;
-  //   background-color: rgba($main-color-1, .05);
-  // }
-
   transition: 1s;
 
   &:hover,
