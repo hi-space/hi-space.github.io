@@ -19,6 +19,7 @@
   .navigation__item--active {
     &::after {
       @include split-line(bottom, 4px, $text-color-theme-dark);
+      transition: all .5s;
     }
   }
 }
@@ -29,6 +30,7 @@
   .navigation__item--active {
     &::after {
       @include split-line(bottom, 4px, $text-color-theme-light);
+      transition: all .5s;
     }
   }
 }
@@ -106,18 +108,34 @@
 }
 
 .navigation__item {
-  &::after {
-    display: block;
-    margin-bottom: -4px;
-    content: "";
-    @include split-line(bottom, 4px, transparent);
+  a {
+    display: inline-block; position: relative;
+    &::after {
+      content:""; position: absolute; top:110%; left: 50%; bottom: 0; width: 0; height: 4px; background-color: $main-color-1; transition: all .3s;
+    }
+    &::before {
+      content:""; position: absolute; top:110%; right: 50%; bottom: 0; width: 0; height: 4px; background-color: $main-color-1; transition: all .3s;
+    }
+    &:hover {
+      &::before {
+        width: 50%
+      }
+      &::after {
+        width: 50%
+      }
+    }
   }
 }
 .navigation__item--active {
   a {
-    @include link-colors($main-color-1, $main-color-1);
-  }
-  &::after {
-    @include split-line(bottom, 4px, $main-color-1);
+    display: inline-block; position: relative;
+    &::after {
+      content:""; position: absolute; top:110%; left: 50%; bottom: 0; width: 0; height: 4px; background-color: $main-color-1; transition: all .3s;
+      width: 50%
+    }
+    &::before {
+      content:""; position: absolute; top:110%; right: 50%; bottom: 0; width: 0; height: 4px; background-color: $main-color-1; transition: all .3s;
+      width: 50%
+    }
   }
 }
