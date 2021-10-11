@@ -82,6 +82,23 @@ pred = torch.argmax(val_pred, 1).squeeze(0).cpu().data.numpy()
 mask = self.label_mapping(pred, self.mapping)
 ```
 
+```py
+fig = plt.figure('eval')
+self.ax1, self.ax2, self.ax3 = fig.add_subplot(1, 3, 1), fig.add_subplot(1, 3, 2), fig.add_subplot(1, 3, 3)
+self.ax1.axis('off'), self.ax2.axis('off'), self.ax3.axis('off')
+self.ax1.set_title('train input'), self.ax2.set_title('train output'), self.ax3.set_title('train gt')
+
+labels = labels.cpu()
+labels[labels==255] = 0
+
+self.ax1.imshow(torchvision.utils.make_grid(images[0, :, :, :].cpu(), normalize=True).permute(1,2,0))
+self.ax2.imshow(torch.argmax(pred1, 1)[0:1, :, :].cpu().permute(1,2,0))
+self.ax3.imshow(labels[0:1, :, :].permute(1,2,0))
+
+plt.draw()
+plt.savefig('eval.png')
+```
+
 ## Troubleshooting
 
 ```

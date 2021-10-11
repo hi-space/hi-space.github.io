@@ -538,6 +538,35 @@ TEST.TEST_MODEL_PATH /home/yoo/workspace/SSL-Synthetic-Segmentation/seg/checkpoi
 ===>bicycle:    39.36
 ===> mIoU: 45.14
 ```
+# GTA 데이터셋으로만 학습된 모델
+
+### gta_seg
+
+- epoch: 30000
+  
+```sh
+# evaluate_cityscapes
+===>road:       59.34
+===>sidewalk:   20.42
+===>building:   74.38
+===>wall:       16.13
+===>fence:      23.1
+===>pole:       33.19
+===>light:      32.32
+===>sign:       37.46
+===>vegetation: 79.27
+===>terrain:    21.66
+===>sky:        76.82
+===>person:     57.92
+===>rider:      15.75
+===>car:        75.9
+===>truck:      19.93
+===>bus:        20.26
+===>train:      0.29
+===>motocycle:  21.81
+===>bicycle:    34.99
+===> mIoU: 37.94
+```
 
 # Segmentation 모델만 target 데이터셋 줄여가며 성능 테스트
 
@@ -676,6 +705,29 @@ TEST.TEST_MODEL_PATH /home/yoo/workspace/SSL-Synthetic-Segmentation/seg/checkpoi
 - cityscapes only (100)
 
 ```sh
+# epoch 40000
+===>road:       92.71
+===>sidewalk:   57.45
+===>building:   79.52
+===>wall:       5.33
+===>fence:      9.65
+===>pole:       36.37
+===>light:      6.09
+===>sign:       46.04
+===>vegetation: 84.59
+===>terrain:    28.44
+===>sky:        82.21
+===>person:     59.98
+===>rider:      0.67
+===>car:        86.96
+===>truck:      0.05
+===>bus:        44.63
+===>train:      0.0
+===>motocycle:  11.86
+===>bicycle:    58.43
+===> mIoU: 41.63
+
+# epoch 20000
 ===>road:       92.62
 ===>sidewalk:   56.93
 ===>building:   79.11
@@ -984,6 +1036,8 @@ TEST.TEST_MODEL_PATH /home/yoo/workspace/SSL-Synthetic-Segmentation/seg/checkpoi
 
 ### `Single + Cutmix real`에서 cityscapes 데이터셋 줄여가며 테스트
 
+#### aagc_640x360_b2_single_cutmix_real_d1000
+
 ```sh
 # citys 데이터: 1000 / epoch: 20000
 ===>road:       89.8
@@ -1006,7 +1060,31 @@ TEST.TEST_MODEL_PATH /home/yoo/workspace/SSL-Synthetic-Segmentation/seg/checkpoi
 ===>motocycle:  30.78
 ===>bicycle:    53.05
 ===> mIoU: 48.1
+
+# citys 데이터: 1000 / epoch: 30000
+===>road:       90.33
+===>sidewalk:   49.98
+===>building:   79.28
+===>wall:       30.2
+===>fence:      25.75
+===>pole:       33.89
+===>light:      32.75
+===>sign:       51.41
+===>vegetation: 82.79
+===>terrain:    40.9
+===>sky:        76.27
+===>person:     59.72
+===>rider:      33.87
+===>car:        82.88
+===>truck:      24.42
+===>bus:        36.07
+===>train:      19.4
+===>motocycle:  28.51
+===>bicycle:    57.53
+===> mIoU: 49.26
 ```
+
+#### aagc_640x360_b2_single_cutmix_real_d500
 
 ```sh
 # citys 데이터: 500 / epoch: 20000
@@ -1031,28 +1109,31 @@ TEST.TEST_MODEL_PATH /home/yoo/workspace/SSL-Synthetic-Segmentation/seg/checkpoi
 ===>bicycle:    56.12
 ===> mIoU: 49.82
 
-# citys 데이터: 500 / epoch: 30000
-===>road:       92.46
-===>sidewalk:   53.44
-===>building:   78.69
-===>wall:       30.76
-===>fence:      27.1
-===>pole:       31.71
-===>light:      29.52
-===>sign:       49.72
-===>vegetation: 83.57
-===>terrain:    44.49
-===>sky:        79.31
-===>person:     61.18
-===>rider:      36.39
-===>car:        86.28
-===>truck:      36.23
-===>bus:        44.9
-===>train:      34.16
-===>motocycle:  32.62
-===>bicycle:    47.8
-===> mIoU: 51.6
+# citys 데이터: 500 / epoch: 40000
+===>road:       89.81
+===>sidewalk:   48.98
+===>building:   81.56
+===>wall:       30.33
+===>fence:      29.11
+===>pole:       33.91
+===>light:      37.51
+===>sign:       51.69
+===>vegetation: 83.44
+===>terrain:    43.98
+===>sky:        79.12
+===>person:     64.56
+===>rider:      37.0
+===>car:        86.01
+===>truck:      33.89
+===>bus:        39.35
+===>train:      32.34
+===>motocycle:  40.27
+===>bicycle:    60.05
+===> mIoU: 52.78
+
 ```
+
+#### aagc_640x360_b2_single_cutmix_real_d100
 
 ```sh
 # aagc_640x360_b2_single_cutmix_real_d100
@@ -1077,4 +1158,26 @@ TEST.TEST_MODEL_PATH /home/yoo/workspace/SSL-Synthetic-Segmentation/seg/checkpoi
 ===>motocycle:  23.69
 ===>bicycle:    55.05
 ===> mIoU: 45.97
+
+# epoch:40000
+===>road:       91.54
+===>sidewalk:   52.67
+===>building:   81.64
+===>wall:       25.19
+===>fence:      27.92
+===>pole:       35.46
+===>light:      35.4
+===>sign:       52.92
+===>vegetation: 84.35
+===>terrain:    40.99
+===>sky:        80.59
+===>person:     60.03
+===>rider:      21.42
+===>car:        85.34
+===>truck:      27.39
+===>bus:        36.71
+===>train:      0.11
+===>motocycle:  36.17
+===>bicycle:    58.83
+===> mIoU: 49.19
 ```

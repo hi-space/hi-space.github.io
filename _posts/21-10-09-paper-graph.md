@@ -5,9 +5,8 @@ mathjax_autoNumber: false
 article_header:
     type: overlay
     theme: dark
-    background_color: "#123"
+    background_color: "#000"
     background_image: false
-cover: /assets/images/21-09-24-paper-2021-09-25-00-56-13.png
 ---
 
 ```sh
