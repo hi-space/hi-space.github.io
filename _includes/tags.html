@@ -23,7 +23,7 @@
     {%- assign _tag_min_size = _tag_cur_size -%}
   {%- endif -%}
 {%- endfor -%}
-{%- assign _tag_gap_size =  _tag_max_size | minus: _tag_min_size | plus: 1 | divided_by: 7 -%}
+{%- assign _tag_gap_size =  _tag_max_size | minus: _tag_min_size | plus: 1 | divided_by: 5 -%}
 {%- if _tag_gap_size < 1 -%}
   {%- assign _tag_gap_size = 1 -%}
 {%- endif -%}
@@ -31,7 +31,7 @@
   <ul class="menu">
     <li>
       <button type="button" class="button button--secondary button--pill tag-button tag-button--all" data-encode="">
-        Show All<div class="tag-button__count">{{ site.posts | size }}</div>
+        Show All 📂<div class="tag-button__count">{{ site.posts | size }}</div>
       </button>
     </li>
 
@@ -52,9 +52,6 @@
       {%- assign _tag_min_5 = _tag_max_4 -%}
       {%- assign _tag_max_5 = _tag_min_5 | plus: _tag_gap_size -%}
       {%- assign _tag_min_6 = _tag_max_5 -%}
-      {%- assign _tag_max_6 = _tag_min_6 | plus: _tag_gap_size -%}
-      {%- assign _tag_min_7 = _tag_max_6 -%}
-      {%- assign _tag_max_7 = _tag_min_7 | plus: _tag_gap_size -%}
       {%- if _tag_cur_size >= _tag_min_1 and _tag_cur_size < _tag_max_1 -%}
         {%- assign _c_index = 1 -%}
       {%- elsif _tag_cur_size >= _tag_min_2 and _tag_cur_size < _tag_max_2 -%}
@@ -65,12 +62,8 @@
         {%- assign _c_index = 4 -%}
       {%- elsif _tag_cur_size >= _tag_min_5 and _tag_cur_size < _tag_max_5 -%}
         {%- assign _c_index = 5 -%}
-      {%- elsif _tag_cur_size >= _tag_min_6 and _tag_cur_size < _tag_max_6 -%}
-        {%- assign _c_index = 6 -%}
-      {%- elsif _tag_cur_size >= _tag_min_7 and _tag_cur_size < _tag_max_7 -%}
-        {%- assign _c_index = 7 -%}
       {%- else -%}
-        {%- assign _c_index = 7 -%}
+        {%- assign _c_index = 5 -%}
       {%- endif -%}
       <li><button type="button" class="button button--pill tag-button tag-button-{{ _c_index }}" data-encode="{{ tag | strip | url_encode }}">
           <span>{{ tag | strip }}</span><div class="tag-button__count">{{ count }}</div>

@@ -1,6 +1,24 @@
 .site-tags {
   .tag-button {
-    @include clickable($text-color-3, $main-color-3, default, default, $text-color-2,$main-color-2, $text-color-2,$main-color-2);
+    @include clickable(
+      rgba($text-color-3, 0.9),     // $clr           기본 text
+      $main-color-3,                // $bg-clr        기본 bg
+      $text-color-3,                // $hover-clr     hover시 text
+      $main-color-3,                // $hover-bg-clr  hover시 bg
+      $text-color-2,                // $active-clr    클릭 후 선택 직전까지 text
+      $main-color-1,                // $active-bg-clr 클릭 후 선택 직전까지 bg
+      $text-color-3,                // $focus-clr     선택되었을 때 text
+      rgba($main-color-1, 0.1)      // $focus-bg-clr  선택되었을 때 bg
+    ) {
+      // tag button hover시 효과
+      &:hover {
+        box-shadow: 0 0 0 2px $main-color-1;
+      }
+      color: $text-color-1;
+      box-shadow: 0 0 0 1px rgba($text-color-1, 0.05);
+      margin-right: 4px;
+    }
+    // tag 버튼 내에 있는 count용 윗첨자
     & > .tag-button__count {
       display: inline-block;
       margin-left: map-get($spacers, 1);
@@ -9,25 +27,35 @@
       vertical-align: top;
     }
   }
-  .tag-button-1 {
-    @include clickable($text-color-1, rgba($main-color-1, .3), default, default, $text-color-2,$main-color-2, $text-color-2,$main-color-2);
-  }
-  .tag-button-2 {
-    @include clickable($text-color-1, rgba($main-color-1, .4), default, default, $text-color-2,$main-color-2, $text-color-2,$main-color-2);
-  }
-  .tag-button-3 {
-    @include clickable($text-color-1, rgba($main-color-1, .5), default, default, $text-color-2,$main-color-2, $text-color-2,$main-color-2);
-  }
-  .tag-button-4 {
-    @include clickable($text-color-1, rgba($main-color-1, .6), default, default, $text-color-2,$main-color-2, $text-color-2,$main-color-2);
-  }
-  .tag-button-5 {
-    @include clickable($text-color-1, rgba($main-color-1, .7), default, default, $text-color-2,$main-color-2, $text-color-2,$main-color-2);
-  }
-  .tag-button-6 {
-    @include clickable($text-color-1, rgba($main-color-1, .8), default, default, $text-color-2,$main-color-2, $text-color-2,$main-color-2);
-  }
-  .tag-button-7 {
-    @include clickable($text-color-1, rgba($main-color-1, .9), default, default, $text-color-2,$main-color-2, $text-color-2,$main-color-2);
-  }
+
+  // .tag-button--all {
+  //   // tag 버튼 내에 있는 count용 윗첨자
+  //   & > .tag-button__count {
+  //     // color: $text-color-1;
+  //     display: inline-block;
+  //     margin-left: map-get($spacers, 1);
+  //     // font-size: map-get($base, font-size-root-sm);
+  //     line-height: 1;
+  //     vertical-align: top;
+  //     &::before {
+  //       content: "📚";    // 📂📌📋📝📦🧾📄📃📑
+  //     }
+  //   }
+  // }
+
+  // .tag-button-1 {
+  //   @include clickable($text-color-1, rgba($main-color-1, .3), default, default, $text-color-2,$main-color-2, $text-color-2,$main-color-2);
+  // }
+  // .tag-button-2 {
+  //   @include clickable($text-color-1, rgba($main-color-1, .4), default, default, $text-color-2,$main-color-2, $text-color-2,$main-color-2);
+  // }
+  // .tag-button-3 {
+  //   @include clickable($text-color-1, rgba($main-color-1, .5), default, default, $text-color-2,$main-color-2, $text-color-2,$main-color-2);
+  // }
+  // .tag-button-4 {
+  //   @include clickable($text-color-1, rgba($main-color-1, .7), default, default, $text-color-2,$main-color-2, $text-color-2,$main-color-2);
+  // }
+  // .tag-button-5 {
+  //   @include clickable($text-color-1, rgba($main-color-1, .9), default, default, $text-color-2,$main-color-2, $text-color-2,$main-color-2);
+  // }
 }

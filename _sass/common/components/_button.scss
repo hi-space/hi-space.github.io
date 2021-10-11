@@ -161,3 +161,24 @@
     height: map-get($button, circle-diameter-xl);
   }
 }
+
+.button--tag {
+  @include clickable(
+    rgba($text-color-3, 0.9),     // $clr           기본 text
+    $main-color-3,                // $bg-clr        기본 bg
+    $text-color-3,                // $hover-clr     hover시 text
+    $main-color-3,                // $hover-bg-clr  hover시 bg
+    $text-color-2,                // $active-clr    클릭 후 선택 직전까지 text
+    $main-color-1,                // $active-bg-clr 클릭 후 선택 직전까지 bg
+    $text-color-3,                // $focus-clr     선택되었을 때 text
+    rgba($main-color-1, 0.1)      // $focus-bg-clr  선택되었을 때 bg
+  ) {
+    // tag button hover시 효과
+    &:hover {
+      box-shadow: 0 0 0 2px $main-color-1;
+    }
+    box-shadow: 0 0 0 1px rgba($text-color-1, 0.1);
+    margin-right: 6px;
+    font-weight: map-get($base, font-weight);
+  }
+}
