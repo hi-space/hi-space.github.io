@@ -603,6 +603,101 @@ python -u ./tools/eval.py \
 
 # epoch 30000
 ===> mIoU: 69.12
+
+# epoch 40000
+===>road:       95.99
+===>sidewalk:   71.69
+===>building:   87.58
+===>wall:       33.96
+===>fence:      44.02
+===>pole:       46.28
+===>light:      55.36
+===>sign:       66.95
+===>vegetation: 86.52
+===>terrain:    46.72
+===>sky:        87.97
+===>person:     71.53
+===>rider:      50.28
+===>car:        90.89
+===>truck:      61.77
+===>bus:        77.68
+===>train:      62.53
+===>motocycle:  37.3
+===>bicycle:    60.23
+===> mIoU: 65.01
+
+# epoch: 70000
+===>road:       95.04
+===>sidewalk:   69.93
+===>building:   89.4
+===>wall:       43.71
+===>fence:      49.85
+===>pole:       47.67
+===>light:      57.45
+===>sign:       68.15
+===>vegetation: 88.73
+===>terrain:    56.4
+===>sky:        92.23
+===>person:     71.86
+===>rider:      54.8
+===>car:        92.2
+===>truck:      75.53
+===>bus:        77.21
+===>train:      58.76
+===>motocycle:  54.54
+===>bicycle:    68.28
+===> mIoU: 69.04
+```
+
+- cyclegta 데이터셋에 evaluate
+
+```sh
+# cityscapes mIou 69.04 모델 사용
+===>road:       67.33
+===>sidewalk:   34.73
+===>building:   64.52
+===>wall:       13.64
+===>fence:      14.49
+===>pole:       31.52
+===>light:      26.56
+===>sign:       21.83
+===>vegetation: 63.37
+===>terrain:    28.59
+===>sky:        69.39
+===>person:     63.47
+===>rider:      30.73
+===>car:        65.61
+===>truck:      51.88
+===>bus:        11.01
+===>train:      0.0
+===>motocycle:  31.25
+===>bicycle:    12.13
+===> mIoU: 36.95
+```
+
+- gta 데이터셋에 evaluate
+
+```sh
+===>road:       76.19
+===>sidewalk:   30.46
+===>building:   72.25
+===>wall:       20.89
+===>fence:      17.21
+===>pole:       32.6
+===>light:      27.88
+===>sign:       21.31
+===>vegetation: 65.79
+===>terrain:    30.55
+===>sky:        81.02
+===>person:     67.55
+===>rider:      39.37
+===>car:        73.12
+===>truck:      60.01
+===>bus:        24.73
+===>train:      0.0
+===>motocycle:  46.85
+===>bicycle:    7.3
+===> mIoU: 41.85
 ```
 
 ### cityscapes_seg_d2000
@@ -874,6 +969,28 @@ python -u ./tools/eval.py \
 ===>motocycle:  11.86
 ===>bicycle:    58.43
 ===> mIoU: 41.63
+
+# epoch 65000
+===>road:       93.21
+===>sidewalk:   58.56
+===>building:   78.66
+===>wall:       4.79
+===>fence:      8.64
+===>pole:       35.33
+===>light:      4.1
+===>sign:       39.52
+===>vegetation: 84.05
+===>terrain:    27.49
+===>sky:        81.02
+===>person:     59.66
+===>rider:      0.5
+===>car:        86.61
+===>truck:      0.0
+===>bus:        42.72
+===>train:      0.0
+===>motocycle:  9.63
+===>bicycle:    58.49
+===> mIoU: 40.68
 ```
 
 # Seg-Uncertanity -> Single Segmentation
@@ -1017,6 +1134,28 @@ python -u ./tools/eval.py \
 ===>motocycle:  44.39
 ===>bicycle:    54.53
 ===> mIoU: 56.39
+
+# epoch: 45000
+===>road:       92.44
+===>sidewalk:   56.27
+===>building:   82.7
+===>wall:       38.69
+===>fence:      34.81
+===>pole:       36.3
+===>light:      33.98
+===>sign:       45.19
+===>vegetation: 84.58
+===>terrain:    46.65
+===>sky:        84.52
+===>person:     64.44
+===>rider:      40.53
+===>car:        87.79
+===>truck:      47.94
+===>bus:        57.58
+===>train:      42.2
+===>motocycle:  43.64
+===>bicycle:    54.07
+===> mIoU: 56.54
 ```
 
 ## Single + FixMatach
