@@ -111,10 +111,26 @@
   a {
     display: inline-block; position: relative;
     &::after {
-      content:""; position: absolute; top:110%; left: 50%; bottom: 0; width: 0; height: 4px; background-color: $main-color-1; transition: all .3s;
+      content:"";
+      position: absolute;
+      top:110%;
+      left: 50%;
+      bottom: 0;
+      width: 0;
+      height: 4px;
+      background-color: $main-color-1;
+      transition: all .3s;
     }
     &::before {
-      content:""; position: absolute; top:110%; right: 50%; bottom: 0; width: 0; height: 4px; background-color: $main-color-1; transition: all .3s;
+      content:"";
+      position: absolute;
+      top:110%;
+      right: 50%;
+      bottom: 0;
+      width: 0;
+      height: 4px;
+      background-color: $main-color-1;
+      transition: all .3s;
     }
     &:hover {
       &::before {
@@ -130,11 +146,24 @@
   a {
     display: inline-block; position: relative;
     &::after {
-      content:""; position: absolute; top:110%; left: 50%; bottom: 0; width: 0; height: 4px; background-color: $main-color-1; transition: all .3s;
+      content:"";
+      position:absolute;
+      top:110%; left: 50%;
+      bottom: 0;
+      width: 0;
+      height: 4px;
+      background-color: $main-color-1;
+      transition: all .3s;
       width: 50%
     }
     &::before {
-      content:""; position: absolute; top:110%; right: 50%; bottom: 0; width: 0; height: 4px; background-color: $main-color-1; transition: all .3s;
+      content:"";
+      position: absolute;
+      top:110%; right: 50%;
+      bottom: 0; width: 0;
+      height: 4px;
+      background-color: $main-color-1;
+      transition: all .3s;
       width: 50%
     }
   }

@@ -513,9 +513,89 @@ python -u ./tools/eval.py \
 ===>bicycle:    39.36
 ===> mIoU: 45.14
 ```
+
 # GTA 데이터셋으로만 학습된 모델
 
-### gta_seg
+## gta_seg
+
+- epoch: 50000
+
+```sh
+# evaluate_cityscapes (epoch 30000)
+===> mIoU: 62.76
+
+# evaluate_cityscapes (epoch 50000)
+===>road:       96.49
+===>sidewalk:   73.71
+===>building:   88.45
+===>wall:       42.6
+===>fence:      44.75
+===>pole:       45.85
+===>light:      54.39
+===>sign:       65.7
+===>vegetation: 88.59
+===>terrain:    52.21
+===>sky:        90.88
+===>person:     69.71
+===>rider:      54.08
+===>car:        91.47
+===>truck:      66.7
+===>bus:        70.83
+===>train:      47.56
+===>motocycle:  51.41
+===>bicycle:    64.27
+===> mIoU: 66.3
+
+# evaluate_gta (epoch 50000)
+===>road:       77.93
+===>sidewalk:   28.66
+===>building:   73.49
+===>wall:       23.64
+===>fence:      13.68
+===>pole:       30.39
+===>light:      25.29
+===>sign:       17.94
+===>vegetation: 64.68
+===>terrain:    25.28
+===>sky:        82.86
+===>person:     62.72
+===>rider:      32.36
+===>car:        57.64
+===>truck:      55.46
+===>bus:        26.3
+===>train:      0.0
+===>motocycle:  39.74
+===>bicycle:    2.58
+===> mIoU: 38.98
+```
+
+```sh
+# genearate plabel
+===>road:       95.86
+===>sidewalk:   73.13
+===>building:   87.13
+===>wall:       45.68
+===>fence:      46.81
+===>pole:       33.79
+===>light:      42.59
+===>sign:       53.43
+===>vegetation: 84.93
+===>terrain:    59.37
+===>sky:        89.59
+===>person:     62.29
+===>rider:      45.55
+===>car:        88.68
+===>truck:      60.94
+===>bus:        73.8
+===>train:      75.89
+===>motocycle:  50.71
+===>bicycle:    53.44
+===> mIoU: 64.4
+```
+
+# CycleGTA 데이터셋으로만 학습된 모델
+
+### cyclegta_seg
 
 - epoch: 30000
   
@@ -602,102 +682,83 @@ python -u ./tools/eval.py \
 ===> mIoU: 68.03
 
 # epoch 30000
+===>road:       96.78
+===>sidewalk:   76.2
+===>building:   88.65
+===>wall:       47.21
+===>fence:      47.67
+===>pole:       45.15
+===>light:      57.96
+===>sign:       67.66
+===>vegetation: 89.1
+===>terrain:    58.27
+===>sky:        90.43
+===>person:     70.06
+===>rider:      54.8
+===>car:        92.28
+===>truck:      71.83
+===>bus:        78.04
+===>train:      56.63
+===>motocycle:  56.74
+===>bicycle:    67.88
 ===> mIoU: 69.12
 
 # epoch 40000
-===>road:       95.99
-===>sidewalk:   71.69
-===>building:   87.58
-===>wall:       33.96
-===>fence:      44.02
-===>pole:       46.28
-===>light:      55.36
-===>sign:       66.95
-===>vegetation: 86.52
-===>terrain:    46.72
-===>sky:        87.97
-===>person:     71.53
-===>rider:      50.28
-===>car:        90.89
-===>truck:      61.77
-===>bus:        77.68
-===>train:      62.53
-===>motocycle:  37.3
-===>bicycle:    60.23
 ===> mIoU: 65.01
 
 # epoch: 70000
-===>road:       95.04
-===>sidewalk:   69.93
-===>building:   89.4
-===>wall:       43.71
-===>fence:      49.85
-===>pole:       47.67
-===>light:      57.45
-===>sign:       68.15
-===>vegetation: 88.73
-===>terrain:    56.4
-===>sky:        92.23
-===>person:     71.86
-===>rider:      54.8
-===>car:        92.2
-===>truck:      75.53
-===>bus:        77.21
-===>train:      58.76
-===>motocycle:  54.54
-===>bicycle:    68.28
 ===> mIoU: 69.04
 ```
 
 - cyclegta 데이터셋에 evaluate
 
 ```sh
-# cityscapes mIou 69.04 모델 사용
-===>road:       67.33
-===>sidewalk:   34.73
-===>building:   64.52
-===>wall:       13.64
-===>fence:      14.49
-===>pole:       31.52
-===>light:      26.56
-===>sign:       21.83
-===>vegetation: 63.37
-===>terrain:    28.59
-===>sky:        69.39
-===>person:     63.47
-===>rider:      30.73
-===>car:        65.61
-===>truck:      51.88
-===>bus:        11.01
+# cityscapes mIou 69.12 모델 사용
+===>road:       73.49
+===>sidewalk:   26.45
+===>building:   67.32
+===>wall:       21.01
+===>fence:      14.52
+===>pole:       27.5
+===>light:      28.32
+===>sign:       19.34
+===>vegetation: 65.17
+===>terrain:    27.69
+===>sky:        75.36
+===>person:     58.92
+===>rider:      30.41
+===>car:        66.92
+===>truck:      56.81
+===>bus:        18.08
 ===>train:      0.0
-===>motocycle:  31.25
-===>bicycle:    12.13
-===> mIoU: 36.95
+===>motocycle:  30.51
+===>bicycle:    14.01
+===> mIoU: 37.99
 ```
 
 - gta 데이터셋에 evaluate
 
 ```sh
-===>road:       76.19
-===>sidewalk:   30.46
-===>building:   72.25
-===>wall:       20.89
-===>fence:      17.21
-===>pole:       32.6
-===>light:      27.88
-===>sign:       21.31
-===>vegetation: 65.79
-===>terrain:    30.55
-===>sky:        81.02
-===>person:     67.55
-===>rider:      39.37
-===>car:        73.12
-===>truck:      60.01
-===>bus:        24.73
+===>road:       77.78
+===>sidewalk:   26.91
+===>building:   72.63
+===>wall:       27.42
+===>fence:      14.84
+===>pole:       29.56
+===>light:      29.58
+===>sign:       20.04
+===>vegetation: 66.65
+===>terrain:    29.65
+===>sky:        85.12
+===>person:     66.62
+===>rider:      38.9
+===>car:        74.32
+===>truck:      58.2
+===>bus:        27.41
 ===>train:      0.0
-===>motocycle:  46.85
-===>bicycle:    7.3
-===> mIoU: 41.85
+===>motocycle:  41.67
+===>bicycle:    12.06
+===> mIoU: 42.07
 ```
 
 ### cityscapes_seg_d2000
@@ -1026,6 +1087,28 @@ python -u ./tools/eval.py \
 ===>motocycle:  26.9
 ===>bicycle:    42.08
 ===> mIoU: 42.9
+
+# epoch: 70000
+===>road:       85.4
+===>sidewalk:   32.19
+===>building:   81.54
+===>wall:       26.18
+===>fence:      23.62
+===>pole:       34.94
+===>light:      34.56
+===>sign:       37.09
+===>vegetation: 81.75
+===>terrain:    27.58
+===>sky:        76.5
+===>person:     59.51
+===>rider:      28.75
+===>car:        82.48
+===>truck:      26.63
+===>bus:        29.81
+===>train:      1.22
+===>motocycle:  23.29
+===>bicycle:    42.34
+===> mIoU: 43.97
 ```
 
 ## Single + Cutmix
@@ -1156,6 +1239,50 @@ python -u ./tools/eval.py \
 ===>motocycle:  43.64
 ===>bicycle:    54.07
 ===> mIoU: 56.54
+
+# epoch: 50000
+===>road:       87.74
+===>sidewalk:   43.76
+===>building:   80.96
+===>wall:       30.82
+===>fence:      29.32
+===>pole:       32.91
+===>light:      42.55
+===>sign:       45.08
+===>vegetation: 83.38
+===>terrain:    45.83
+===>sky:        86.17
+===>person:     67.12
+===>rider:      40.13
+===>car:        84.07
+===>truck:      35.01
+===>bus:        36.59
+===>train:      41.7
+===>motocycle:  38.29
+===>bicycle:    57.1
+===> mIoU: 53.08
+
+# epoch: 100000
+===>road:       93.82
+===>sidewalk:   61.26
+===>building:   79.81
+===>wall:       34.29
+===>fence:      30.79
+===>pole:       31.43
+===>light:      37.59
+===>sign:       45.45
+===>vegetation: 84.22
+===>terrain:    49.82
+===>sky:        86.3
+===>person:     63.91
+===>rider:      37.04
+===>car:        87.02
+===>truck:      34.24
+===>bus:        60.18
+===>train:      21.78
+===>motocycle:  37.76
+===>bicycle:    53.58
+===> mIoU: 54.23
 ```
 
 ## Single + FixMatach
