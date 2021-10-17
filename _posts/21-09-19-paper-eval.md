@@ -1315,6 +1315,55 @@ python -u ./tools/eval.py \
 ===> mIoU: 20.25
 ```
 
+## Multi + CutMix
+
+```sh
+# epoch 35000
+===>road:       94.08
+===>sidewalk:   65.59
+===>building:   83.69
+===>wall:       41.1
+===>fence:      33.11
+===>pole:       40.89
+===>light:      47.57
+===>sign:       51.55
+===>vegetation: 86.21
+===>terrain:    44.62
+===>sky:        81.91
+===>person:     62.26
+===>rider:      45.4
+===>car:        88.18
+===>truck:      48.33
+===>bus:        48.33
+===>train:      21.63
+===>motocycle:  42.35
+===>bicycle:    50.54
+===> mIoU: 56.7
+
+# epoch 50000
+# aagc_640x360_b2_multi_cutmix_re/GTA5_50000.pth
+===>road:       94.71
+===>sidewalk:   67.65
+===>building:   83.67
+===>wall:       38.21
+===>fence:      27.91
+===>pole:       41.69
+===>light:      44.74
+===>sign:       50.06
+===>vegetation: 84.47
+===>terrain:    41.99
+===>sky:        86.29
+===>person:     66.25
+===>rider:      43.84
+===>car:        89.59
+===>truck:      68.62
+===>bus:        52.84
+===>train:      36.3
+===>motocycle:  39.22
+===>bicycle:    53.15
+===> mIoU: 58.48
+```
+
 ---
 
 # Pseudo Label
@@ -1346,6 +1395,18 @@ python -u ./tools/eval.py \
 ===>motocycle:  38.19
 ===>bicycle:    34.73
 ===> mIoU: 50.57
+```
+
+- multi_cutmix_real로 pseudo labeling
+
+```sh
+
+```
+
+- multi_cutmix_real로 augment mean pseudo labeling
+
+```sh
+
 ```
 
 # Pseudo Labeled 데이터 training
@@ -1660,4 +1721,31 @@ python -u ./tools/eval.py \
 ===>motocycle:  36.17
 ===>bicycle:    58.83
 ===> mIoU: 49.19
+```
+
+# entropy minimization
+
+# epoch 30000
+
+```sh
+===>road:       90.9
+===>sidewalk:   36.44
+===>building:   82.86
+===>wall:       27.97
+===>fence:      23.77
+===>pole:       36.93
+===>light:      36.75
+===>sign:       42.73
+===>vegetation: 79.49
+===>terrain:    34.4
+===>sky:        69.09
+===>person:     55.36
+===>rider:      13.78
+===>car:        84.52
+===>truck:      24.19
+===>bus:        31.77
+===>train:      0.86
+===>motocycle:  24.2
+===>bicycle:    10.26
+===> mIoU: 42.44
 ```

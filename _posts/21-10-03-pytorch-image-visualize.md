@@ -59,28 +59,7 @@ plt.pause(0.001)
 
 ## Prediction visualize
 
-```python
-import json
-devkit_dir = 'dataset/cityscapes_list'
-with open(devkit_dir+'/info.json', 'r') as fp:
-    info = json.load(fp)
-num_classes = np.int(info['classes'])
-name_classes = np.array(info['label'], dtype=np.str)
-self.mapping = np.array(info['label2train'], dtype=np.int)
-
-def label_mapping(self, input, mapping):
-    output = np.copy(input)
-    for ind in range(len(mapping)):
-        output[input == mapping[ind][0]] = mapping[ind][1]
-    return np.array(output, dtype=np.int64)
-    
-val_pred = self.model(images_v)
-val_pred = self.interp(val_pred)
-val_loss = self.seg_loss(val_pred, labels_v)
-
-pred = torch.argmax(val_pred, 1).squeeze(0).cpu().data.numpy()
-mask = self.label_mapping(pred, self.mapping)
-```
+### Save Image files
 
 ```py
 fig = plt.figure('eval')
@@ -97,6 +76,52 @@ self.ax3.imshow(labels[0:1, :, :].permute(1,2,0))
 
 plt.draw()
 plt.savefig('eval.png')
+```
+
+### Save to tensorboard
+
+```py
+import torchvision
+from PIL import Image
+
+palette = [128, 64, 128, 244, 35, 232, 70, 70, 70, 102, 102, 156,
+           190, 153, 153, 153, 153, 153, 250,
+           170, 30,
+           220, 220, 0, 107, 142, 35, 152, 251, 152,
+           70, 130, 180, 220, 20, 60, 255, 0, 0, 0, 0,
+           142, 0, 0, 70,
+           0, 60, 100, 0, 80, 100, 0, 0, 230, 119, 11, 32]
+zero_pad = 256 * 3 - len(palette)
+for i in range(zero_pad):
+    palette.append(0)
+
+
+def colorize_mask(mask):
+    # mask: numpy array of the mask
+    new_mask = Image.fromarray(mask.astype(np.uint8)).convert('P')
+    new_mask.putpalette(palette)
+    return new_mask
+
+
+def draw_in_tensorboard(writer, images, i_iter, pred_main, num_classes, type_):
+    grid_image = torchvision.utils.make_grid(images[:3].clone().cpu().data, 3, normalize=True)
+    writer.add_image('Image - {type_}', grid_image, i_iter)
+
+    grid_image = torchvision.utils.make_grid(torch.from_numpy(np.array(colorize_mask(np.asarray(
+        np.argmax(F.softmax(pred_main, dim=1).cpu().data[0].numpy().transpose(1, 2, 0),
+                axis=2), dtype=np.uint8)).convert('RGB')).transpose(2, 0, 1)), 3,
+                        normalize=False, value_range=(0, 255))
+    writer.add_image('Prediction - {type_}', grid_image, i_iter)
+
+    output_sm = F.softmax(pred_main, dim=1).cpu().data[0].numpy().transpose(1, 2, 0)
+    output_ent = np.sum(-np.multiply(output_sm, np.log2(output_sm)), axis=2,
+                        keepdims=False)
+    grid_image = torchvision.utils.make_grid(torch.from_numpy(output_ent), 3, normalize=True,
+                        value_range=(0, np.log2(num_classes)))
+    writer.add_image('Entropy - {type_}', grid_image, i_iter)
+
+draw_in_tensorboard(writer, images, i_iter, pred2, 19, 'S')
+draw_in_tensorboard(writer, images_t, i_iter, pred_target2, 19, 'T')
 ```
 
 ## Troubleshooting
