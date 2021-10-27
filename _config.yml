@@ -87,7 +87,7 @@ chart: true # false (default), true
 
 ## => Paginate
 ##############################
-paginate: 10
+paginate: 5
 paginate_path: /page:num # don't change this unless for special need
 
 ## => Sources
@@ -119,7 +119,8 @@ comments:
     clientSecret:
     repository:
     owner:
-    admin:# GitHub repo owner and collaborators, only these guys can initialize GitHub issues, IT IS A LIST.
+    admin:
+      # GitHub repo owner and collaborators, only these guys can initialize GitHub issues, IT IS A LIST.
       # - hi-space
       # - your GitHub Id
 
