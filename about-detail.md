@@ -14,34 +14,34 @@ key: page-about-detail
 
 ### Career
 
-- Samsung Research, Samsung Electronics <sub><sup>_15.01 - 21.09_</sub></sup>
-- Intelligence Research, Kakao Mobility <sub><sup>_21.09 -_</sub></sup>
+- <small>15.01 - 21.09</small> Samsung Research, Samsung Electronics
+- <small>21.09 -      </small> Intelligence Research, Kakao Mobility
 
 ### Presentations
 
 - 청주대학교 AR/VR 특강
-  - AR 이론 / Unity를 이용한 앱 개발 강의 (4h) <sub><sup>_21.10_</sub></sup>
+  - <small> AR 이론 / Unity를 이용한 앱 개발 강의 (4h) </small> <sub><sup>_21.10_</sub></sup>
 - 서울문화재단 뉴미디어 기술 지원 사업
-  - Unity를 활용한 AR 기획/제작 방법 강의 (1h) <sub><sup>_21.04_</sub></sup> 
+  - <small> Unity를 활용한 AR 기획/제작 방법 강의 (1h) </small> <sub><sup>_21.04_</sub></sup> 
 
 ### Contests
 
 - 문화기술 공공콘텐츠 전시 <sub><sup>_20.10_ </sup></sub>
-  - 비대면 시대 마음을 AR로 전하는 언택트 인사 챌린지 Rollvi
+  - <small> 비대면 시대 마음을 AR로 전하는 언택트 인사 챌린지 Rollvi </small>
 - YONSEI 스타트업 LAB 컨테스트 대상 <sub><sup>_20.08_ </sup></sub>
-  - AR Lyric 비디오 제작 앱 서비스
+  - <small> AR Lyric 비디오 제작 앱 서비스 </small>
 - Korea Clinical Datathon 2019 최우수상 <sub><sup>_19.09_ </sup></sub>
-  - Federated learning model of predicting hemodynamic instability during ICU stays
+  - <small> Federated learning model of predicting hemodynamic instability during ICU stays </small>
 - Naver AI Rush round 2 <sub><sup>_19.08_ </sup></sub>
-  - Spam image filtering
+  - <small> Spam image filtering </small>
 - MWC 4YFN 전시 <sub><sup>_17.02_ </sup></sub>
-  - VR Home Furnishing Solution
+  - <small> VR Home Furnishing Solution </small>
 - 지능형 창작로봇 경연대회 대상 외 1건 <sub><sup>_14.12_ </sup></sub>
-  - Autonomous-driving bicycle
+  - <small> Autonomous-driving bicycle </small>
 - 국방ICT융합인력양성 사업단 종합 학술대회 우수 발표상 <sub><sup>_14.10_ </sup></sub>
-  - Bicycle navigation app that recommends the optimal path with crowdsourcing
+  - <small> Bicycle navigation app that recommends the optimal path with crowdsourcing </small>
 - 한국지능로봇경진대회 우수상 <sub><sup>_14.10_ </sup></sub>
-  - Autonomous-driving bicycle
+  - <small> Autonomous-driving bicycle </small>
 
 ### Projects
 
