@@ -20,9 +20,9 @@ key: page-about-detail
 ### Presentations
 
 - 청주대학교 AR/VR 특강
-  - <small> AR 이론 / Unity를 이용한 앱 개발 강의 (4h) </small> <sub><sup>_21.10_</sub></sup>
+  - <small> AR 이론 / Unity를 이용한 앱 개발 강의 (4h) </small> <sub><sup>_21.10_</sup></sub>
 - 서울문화재단 뉴미디어 기술 지원 사업
-  - <small> Unity를 활용한 AR 기획/제작 방법 강의 (1h) </small> <sub><sup>_21.04_</sub></sup> 
+  - <small> Unity를 활용한 AR 기획/제작 방법 강의 (1h) </small> <sub><sup>_21.04_</sup></sub>
 
 ### Contests
 
