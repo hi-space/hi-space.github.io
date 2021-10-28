@@ -3,8 +3,6 @@ title: "Pulse Secure Clinet on Ubuntu 20.04"
 tags: env
 ---
 
-<!--more-->
-
 # Install
 
 ```sh
@@ -15,6 +13,8 @@ sudo /usr/local/pulse/PulseClient_x86_64.sh install_dependency_packages
 sudo apt install libproxy1-plugin-webkit
 sudo apt install libwebkitgtk-1.0
 ```
+
+<!--more-->
 
 # Start
 

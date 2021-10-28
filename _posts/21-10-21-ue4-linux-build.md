@@ -4,14 +4,17 @@ category: Game
 tags: env unreal
 ---
 
-<!--more-->
-
 ## Generating project files for your project
 To generate project files for your project, you need to run this command from the UnrealEngine folder:
 
 ```sh
 ./GenerateProjectFiles.sh -project="/home/user/Documents/Unreal\ Projects/MyProject/MyProject.uproject" -game -engine  -vscode
 ```
+
+- 하이하이하이
+  - 호이호이호이
+
+<!--more-->
 
 ## Scripts
 
