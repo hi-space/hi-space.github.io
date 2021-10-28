@@ -220,6 +220,8 @@
     ul, ol {
       margin-top: 0;
       margin-bottom: 0;
+      font-size: map-get($base, font-size-sm);
+      color: rgba($text-color-3, 0.7);
     }
     li {
       p {
