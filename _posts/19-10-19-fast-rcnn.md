@@ -1,6 +1,6 @@
 ---
 title: Fast RCNN
-Category: AI
+category: AI
 tags: ai paper
 ---
 

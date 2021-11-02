@@ -1,6 +1,6 @@
 ---
 title: Faster RCNN
-Category: AI
+category: AI
 tags: ai paper
 ---
 # Faster R-CNN

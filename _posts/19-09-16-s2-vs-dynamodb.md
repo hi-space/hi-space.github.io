@@ -1,5 +1,6 @@
 ---
 title: "S3 vs DynamoDB"
+category: WEB
 tags: backend
 ---
 
