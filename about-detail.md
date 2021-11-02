@@ -9,9 +9,9 @@ key: page-about-detail
 # About
 
 - Autonomous Driving Software Developer
-- Learning **Vision-based AI**
-- Interested in **AR/VR**
-- Sometimes do the **Web**
+- Learning Vision-based AI
+- Interested in XR
+- Sometimes do the Web
 
 ### Career
 
@@ -50,7 +50,7 @@ key: page-about-detail
 - 🤖 Combining UDA and SSL using synthetic images <small> (21.07. - 21.11.) </small>
 - 🌐 Smart Farm IoT Solution <small> (21.01. - 21.03.) </small>
 - 🥽 AR Relay Video App <small> (20.09. - 20.11.) </small>
-- 🥽 AR Camera App with Face Recognition <small> (20.09. - 20.11.) </small>
+- 🤖 Face Filter App <small> (20.09. - 20.11.) </small>
 - 🤖 Image Style Transfer using CNN <small> (20.06. - 20.08.) </small>
 - 🥽 VR Interior App <small> (20.01. - 20.03.) </small>
 - 🌐 Design Studio ERP System <small> (19.09. - 19.12.) </small>

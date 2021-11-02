@@ -11,9 +11,6 @@ To generate project files for your project, you need to run this command from th
 ./GenerateProjectFiles.sh -project="/home/user/Documents/Unreal\ Projects/MyProject/MyProject.uproject" -game -engine  -vscode
 ```
 
-- 하이하이하이
-  - 호이호이호이
-
 <!--more-->
 
 ## Scripts

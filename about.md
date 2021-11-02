@@ -9,12 +9,8 @@ key: page-about
 # About
 
 - Autonomous Driving Software Developer
-- Studying vision-based AI
-- Interested in AR/VR 
-
-## Career
-
-#### Samsung Research, Samsung Electronics  　　　<sub><sup>_2015/01 - 2021/09_</sup></sub>
+- Learning Vision-based AI
+- Interested in XR 
 
 ---
 
