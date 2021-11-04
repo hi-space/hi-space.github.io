@@ -1054,6 +1054,33 @@ python -u ./tools/eval.py \
 ===> mIoU: 40.68
 ```
 
+- multi deeplab 사용하지 않고 기존 deeplab v2 사용
+- Only segmentation 모델
+
+```sh
+# aagc_640x360_b4_single_seg_d100/GTA5_75000.pth
+===>road:       91.9
+===>sidewalk:   54.13
+===>building:   78.29
+===>wall:       6.97
+===>fence:      7.56
+===>pole:       29.57
+===>light:      10.78
+===>sign:       43.99
+===>vegetation: 83.58
+===>terrain:    33.43
+===>sky:        78.9
+===>person:     55.75
+===>rider:      1.44
+===>car:        84.21
+===>truck:      0.08
+===>bus:        46.95
+===>train:      0.0
+===>motocycle:  11.41
+===>bicycle:    53.49
+===> mIoU: 40.65
+```
+
 # Seg-Uncertanity -> Single Segmentation
 
 ## Basic
