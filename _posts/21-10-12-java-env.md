@@ -1,6 +1,7 @@
 ---
-title: JAVA ENV
-tags: env
+title: "[Ubuntu] JAVA Setup"
+category: ENV
+tags: env ubuntu
 ---
 
 <!--more-->

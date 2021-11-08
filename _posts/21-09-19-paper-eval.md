@@ -919,6 +919,30 @@ python -u ./tools/eval.py \
 ===> mIoU: 60.48
 ```
 
+```sh
+# aagc_640x360_b4_single_seg_d1000/GTA5_65000.pth
+===>road:       94.17
+===>sidewalk:   60.74
+===>building:   84.95
+===>wall:       22.12
+===>fence:      26.31
+===>pole:       38.2
+===>light:      39.1
+===>sign:       57.77
+===>vegetation: 86.68
+===>terrain:    47.65
+===>sky:        84.03
+===>person:     63.42
+===>rider:      44.44
+===>car:        87.92
+===>truck:      46.77
+===>bus:        63.89
+===>train:      31.95
+===>motocycle:  42.39
+===>bicycle:    61.52
+===> mIoU: 57.05
+```
+
 ### cityscapes_seg_d500
 
 - epoch: 20000
