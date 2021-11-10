@@ -1336,6 +1336,32 @@ python -u ./tools/eval.py \
 ===> mIoU: 54.23
 ```
 
+## Multi + Cutmix 🔥 ⭐️(HOT)
+
+```sh
+# aagc_960x480_b1_multi_cutmix_autoaug_sl/GTA5_65000.pth
+===>road:	95.43
+===>sidewalk:	69.11
+===>building:	87.71
+===>wall:	43.11
+===>fence:	41.39
+===>pole:	42.56
+===>light:	46.78
+===>sign:	59.92
+===>vegetation:	88.41
+===>terrain:	50.54
+===>sky:	90.35
+===>person:	68.91
+===>rider:	49.78
+===>car:	90.29
+===>truck:	61.92
+===>bus:	65.85
+===>train:	46.94
+===>motocycle:	44.2
+===>bicycle:	63.54
+===> mIoU: 63.51
+```
+
 ## Single + FixMatach
 
 - epoch: 30000
