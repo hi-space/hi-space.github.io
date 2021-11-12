@@ -1360,6 +1360,28 @@ python -u ./tools/eval.py \
 ===>motocycle:	44.2
 ===>bicycle:	63.54
 ===> mIoU: 63.51
+
+# aagc_960x480_b1_multi_cutmix_autoaug_sl_d100/GTA5_65000.pth
+===>road:       94.8
+===>sidewalk:   62.4
+===>building:   84.32
+===>wall:       35.64
+===>fence:      28.84
+===>pole:       41.9
+===>light:      36.03
+===>sign:       56.4
+===>vegetation: 84.56
+===>terrain:    40.36
+===>sky:        81.88
+===>person:     64.3
+===>rider:      28.6
+===>car:        88.54
+===>truck:      26.47
+===>bus:        46.22
+===>train:      0.23
+===>motocycle:  33.8
+===>bicycle:    60.25
+===> mIoU: 52.4
 ```
 
 ## Single + FixMatach
