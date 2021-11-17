@@ -3,6 +3,8 @@ title: "[MongoDB] pymongo"
 tags: python db
 ---
 
+<!--more-->
+
 # Install 
 
 #### 1. [MongoDB Setup](/2021/11/06/ubuntu-mongodb.html)
@@ -101,8 +103,6 @@ collection.remove( {'name': 'hi'} )
 # remove all data
 collection.remove({})
 ```
-
-<!--more-->
 
 # References
 
