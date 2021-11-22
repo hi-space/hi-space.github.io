@@ -12,24 +12,20 @@ tags: env ubuntu
 
 ```sh
 wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
+
 sudo sh -c 'echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google.list'
-sudo apt-get update
-sudo apt-get install google-chrome-stable
-```
 
-## Install chromedriver
-
-```sh
-google-chrome --version
-wget -N http://chromedriver.storage.googleapis.com/76.0.3809.68/chromedriver_linux64.zip -P ~/Downloads
-unzip ~/Downloads/chromedriver_linux64.zip
-```
-
-## Install pyvirtualdisplay
-
-```sh
-pip install xlrd
+sudo apt update
+sudo apt install google-chrome-stable
 sudo apt install xvfb
+
+version=`google-chrome --product-version`
+
+wget -N http://chromedriver.storage.googleapis.com/${version}/chromedriver_linux64.zip -P ~/Downloads
+
+unzip ~/Downloads/chromedriver_linux64.zip
+
+pip install xlrd
 pip install pyvirtualdisplay
 pip install webdriver-manager
 ```
