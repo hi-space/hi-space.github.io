@@ -42,3 +42,8 @@ kubectl -f logs {pod-name}
 ```sh
 kubectl exec {pod-name} -it bash
 ```
+
+# References
+
+- [https://zzsza.github.io/development/2019/01/11/kubernetes-and-deployment/](https://zzsza.github.io/development/2019/01/11/kubernetes-and-deployment/)
+- [https://subicura.com/k8s/guide/service.html#service-clusterip-%E1%84%86%E1%85%A1%E1%86%AB%E1%84%83%E1%85%B3%E1%86%AF%E1%84%80%E1%85%B5](https://subicura.com/k8s/guide/service.html#service-clusterip-%E1%84%86%E1%85%A1%E1%86%AB%E1%84%83%E1%85%B3%E1%86%AF%E1%84%80%E1%85%B5)
