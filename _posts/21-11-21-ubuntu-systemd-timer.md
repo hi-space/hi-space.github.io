@@ -5,12 +5,12 @@ tags: ubuntu
 
 systemd 서비스를 특정 시기나 주기적으로 실행시키기 위해 timer service를 세팅한다. 
 
-## 1. Service 생성
+<!--more-->
 
+## 1. Service 생성
 
 ```sh
 # /etc/systemd/system/periodic-task.service
-
 [Unit]
 Description=Crawling job that needs periodic execution
 
@@ -34,7 +34,6 @@ timer의 이름은 service 의 이름과 동일해야 한다.
 
 ```sh
 # /etc/systemd/system/periodic-task.timer
-
 [Unit]
 Description = Timer that periodically triggers crawling.service
 
