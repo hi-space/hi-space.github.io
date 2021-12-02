@@ -5,10 +5,11 @@ header:
     url:        /
   - title:      Archive
     url:        /archive.html
+  - title:      Project
+    url:        /project.html
   - title:      About
     url:        /about.html
-
-
+  
 layouts:
   - title: Layouts
     children:

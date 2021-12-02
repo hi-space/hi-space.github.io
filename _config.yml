@@ -198,6 +198,10 @@ exclude:
   - /screenshots
   - /vendor
 
+collections:
+  project:
+    output: true
+
 defaults:
   ## home
   - scope:
@@ -229,6 +233,12 @@ defaults:
         theme: dark
         background_color: "#123"
         background_image: false
+  ## project
+  - scope:
+      path: ""
+      type: project
+    values:
+      show_date: true
 
 ## => Plugins
 ##############################

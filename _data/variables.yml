@@ -6,6 +6,7 @@ default:
     root: /
     home: /
     archive:  /archive.html
+    project:  /project.html
     rss:  /feed.xml
   mathjax: true
   mathjax_autoNumber: true
