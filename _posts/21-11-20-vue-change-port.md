@@ -3,8 +3,6 @@ title: "[Vue] 접속 port 변경"
 tags: vue frontend
 ---
 
-<!--more-->
-
 vue를 실행시키면 기본적으로 8080 port로 실행이 된다. 실행 port를 변경해주기 위해 npm 또는 package.json 파일을 수정해준다. 
 
 ## 1. npm 
@@ -22,6 +20,8 @@ npm run serve --port 8000
     "lint": "vue-cli-service lint"
 }
 ```
+
+<!--more-->
 
 여기서 port를 80으로 바꿔주게 되면 80 port가 아닌 1024 포트로 실행이 된다.
 

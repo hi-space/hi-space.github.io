@@ -1,6 +1,6 @@
 ---
 title: "[Go] Started"
-tags: go
+tags: go ubuntu
 ---
 
 <!--more-->

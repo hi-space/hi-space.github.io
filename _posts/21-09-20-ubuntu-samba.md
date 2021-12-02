@@ -11,7 +11,7 @@ tags: env ubuntu
 ## 1. Install
 
 ```sh
-sudo apt install -y install samba
+sudo apt install samba
 ```
 
 ## 2. Register a user
@@ -23,7 +23,7 @@ sudo smbpasswd -a <아이디>
 ## 3. Edit a config file
 
 ```sh
-# vi vi /etc/samba/smb.conf
+# sudo vi /etc/samba/smb.conf
 
 [share]
 comment = share directory

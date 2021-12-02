@@ -19,6 +19,11 @@ sudo apt install kubelet kubeadm kubectl kubernetes-cni
 kubectl version --client && kubeadm version
 ```
 
+```sh
+alias k='kubectl'
+```
+
+
 <!--more-->
 
 ## Commands
@@ -34,7 +39,7 @@ kubectl get pods
 #### pod 로그
 
 ```sh
-kubectl -f logs {pod-name}
+kubectl logs -f {pod-name}
 ```
 
 #### pod 접속
