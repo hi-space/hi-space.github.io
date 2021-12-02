@@ -15,6 +15,8 @@ key: page-about-detail
 
 ### Career
 
+- Intelligence Research, Kakao Mobility <small>(21.09. - )</small>
+
 - Samsung Research, Samsung Electronics <small>(15.01. - 21.09.)</small>
   - HRI for Serving Robot <small> (21.02. - 21.09.) </small>
   - AI Monitoring Camera <small> (20.01. - 21.02.) </small>
@@ -22,8 +24,6 @@ key: page-about-detail
   - AI Data Simulation to generate synthetic data <small> (18.09. - 19.12.) </small>
   - Simulation for Autonomous-driving Car <small> (17.09. - 18.06.) </small>
   - 3D Indoor Scanner & VR Home Furnishing <small> (16.01. - 17.03.) </small>
-
-- Intelligence Research, Kakao Mobility <small>(21.09. - )</small>
 
 ---
 
@@ -47,7 +47,7 @@ key: page-about-detail
 
 ### Outside Projects
 
-- 🤖 Combining UDA and SSL using synthetic images <small> (21.07. - 21.11.) </small>
+- 🤖 Unsupervised domain adaptation with semi-supervised learning for semantic segmentation <small> (21.01. - 21.11.) </small>
 - 🌐 Smart Farm IoT Solution <small> (21.01. - 21.03.) </small>
 - 🥽 AR Relay Video App <small> (20.09. - 20.11.) </small>
 - 🤖 Face Filter App <small> (20.09. - 20.11.) </small>
