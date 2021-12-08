@@ -3,6 +3,8 @@ title: "[Ubuntu] vim 세팅"
 tags: ubuntu env 
 ---
 
+<!--more-->
+
 ## Install
 
 ```sh

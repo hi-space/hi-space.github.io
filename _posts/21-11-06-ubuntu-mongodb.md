@@ -1,7 +1,7 @@
 ---
 title: "[Ubuntu] MongoDB Setup"
 category: ENV
-tags: env ubuntu
+tags: env ubuntu db
 ---
 
 ## Install
@@ -31,3 +31,17 @@ mongo
 ```
 
 <!--more-->
+
+## Troubleshooting
+
+### mongodb (code=exited, status=14)
+
+![](/assets/images/21-11-06-ubuntu-mongodb-2021-12-03-16-12-59.png)
+
+```sh
+sudo chown -R mongodb:mongodb /var/lib/mongodb
+sudo chown mongodb:mongodb /tmp/mongodb-27017.sock
+sudo service mongod restart
+```
+
+- [link](https://stackoverflow.com/questions/64608581/mongodb-code-exited-status-14-failed-but-not-any-clear-errors)
