@@ -1194,7 +1194,7 @@ python -u ./tools/eval.py \
 ===> mIoU: 56.2
 ```
 
-## Single + Cutmix real 🔥 ⭐️(HOT)
+## Single + Cutmix real
 
 - epoch: 40000
 - crop_size: 640x360
@@ -1338,6 +1338,8 @@ python -u ./tools/eval.py \
 
 ## Multi + Cutmix 🔥 ⭐️(HOT)
 
+### full
+
 ```sh
 # aagc_960x480_b1_multi_cutmix_autoaug_sl/GTA5_65000.pth
 ===>road:	95.43
@@ -1360,7 +1362,11 @@ python -u ./tools/eval.py \
 ===>motocycle:	44.2
 ===>bicycle:	63.54
 ===> mIoU: 63.51
+```
 
+### 1000
+
+```sh
 # aagc_960x480_b1_multi_cutmix_autoaug_sl_d1000/GTA5_65000.pth
 ===>road:       94.46
 ===>sidewalk:   59.0
@@ -1382,7 +1388,11 @@ python -u ./tools/eval.py \
 ===>motocycle:  43.39
 ===>bicycle:    64.67
 ===> mIoU: 60.61
+```
 
+### 500
+
+```
 # aagc_960x480_b1_multi_cutmix_autoaug_sl_d500/GTA5_65000.pth
 ===>road:       94.26
 ===>sidewalk:   59.22
@@ -1426,7 +1436,11 @@ python -u ./tools/eval.py \
 ===>motocycle:  42.6
 ===>bicycle:    63.35
 ===> mIoU: 61.36
+```
 
+### 100
+
+```
 # aagc_960x480_b1_multi_cutmix_autoaug_sl_d100/GTA5_65000.pth
 ===>road:       94.8
 ===>sidewalk:   62.4
@@ -1448,6 +1462,50 @@ python -u ./tools/eval.py \
 ===>motocycle:  33.8
 ===>bicycle:    60.25
 ===> mIoU: 52.4
+
+# aagc_960x480_b1_multi_cutmix_autoaug_sl_d100_2/GTA5_120000.pth
+===>road:       94.76
+===>sidewalk:   62.68
+===>building:   85.97
+===>wall:       34.02
+===>fence:      23.21
+===>pole:       41.91
+===>light:      42.34
+===>sign:       53.14
+===>vegetation: 87.71
+===>terrain:    49.04
+===>sky:        89.61
+===>person:     64.98
+===>rider:      29.71
+===>car:        88.64
+===>truck:      39.15
+===>bus:        47.1
+===>train:      0.26
+===>motocycle:  29.33
+===>bicycle:    59.58
+===> mIoU: 53.85
+
+# aagc_960x480_b1_multi_cutmix_autoaug_sl_d100_2/GTA5_200000.pth
+===>road:       95.24
+===>sidewalk:   65.81
+===>building:   86.81
+===>wall:       36.48
+===>fence:      29.3
+===>pole:       42.77
+===>light:      45.19
+===>sign:       51.53
+===>vegetation: 87.6
+===>terrain:    45.75
+===>sky:        90.18
+===>person:     66.36
+===>rider:      31.48
+===>car:        90.11
+===>truck:      43.56
+===>bus:        44.08
+===>train:      7.4
+===>motocycle:  35.81
+===>bicycle:    62.28
+===> mIoU: 55.67
 ```
 
 ## Single + FixMatach
