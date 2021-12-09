@@ -1,6 +1,6 @@
 ---
-title: "[Ubuntu] vim 세팅"
-tags: ubuntu env 
+title: "[Vue] Framework (vuetify, bootstrap)"
+tags: vue
 ---
 
 <!--more-->
