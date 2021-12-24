@@ -1,7 +1,7 @@
 ---
 title: Source-Free Domain Adaptation for Semantic Segmentation
 category: AI
-tags: ai paper 🔥
+tags: ai paper
 ---
 
 Source-Free Domain Adaptation for Semantic Segmentation

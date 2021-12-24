@@ -1,7 +1,7 @@
 ---
 title: Meta Pseudo Labels
 category: AI
-tags: ai paper 🔥
+tags: ai paper
 article_header:
     type: overlay
     theme: dark

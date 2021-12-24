@@ -1,7 +1,7 @@
 ---
 title: A Strong, Simple Baseline for Synthetic to Real Image Domain Adaptation (Domain Stylization)
 category: AI
-tags: ai paper 🔥
+tags: ai paper
 article_header:
   type: overlay
   theme: dark

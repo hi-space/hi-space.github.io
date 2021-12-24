@@ -1,6 +1,6 @@
 ---
 title: "[Flask, Vue] Cross origin 해결"
-tags: flask vue troubeshooting
+tags: flask vue troubleshooting
 ---
 
 CORS(Cross Origin Resource Sharing)란 도메인과 포트가 다른 서버로 client가 요청했을때 브라우저가 보안상 이유로 API를 차단하는 문제이다.

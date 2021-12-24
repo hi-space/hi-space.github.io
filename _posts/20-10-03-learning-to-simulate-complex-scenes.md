@@ -1,7 +1,7 @@
 ---
 title: Learning to Simulate Complex Scenes
 category: AI
-tags: ai paper 🔥
+tags: ai paper
 article_header:
     type: overlay # 포스트 내부에서 헤더 오버레이 적용여부
     theme: dark

@@ -1,6 +1,6 @@
 ---
 title: 💡 Paper 실험
-tags: paper 💡 🔥
+tags: paper 💡
 ---
 
 <!--more-->
@@ -1336,7 +1336,7 @@ python -u ./tools/eval.py \
 ===> mIoU: 54.23
 ```
 
-## Multi + Cutmix 🔥 ⭐️(HOT)
+## Multi + Cutmix ⭐️
 
 ### full
 

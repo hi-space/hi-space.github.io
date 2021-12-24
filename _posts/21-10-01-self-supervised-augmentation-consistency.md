@@ -1,7 +1,7 @@
 ---
 title: Self-supervised Augmentation Consistency for Adapting Semantic Segmentation (da-sac)
 category: AI
-tags: ai paper 🔥
+tags: ai paper
 article_header:
     type: overlay
     theme: dark

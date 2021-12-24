@@ -1,7 +1,7 @@
 ---
 title: A Review of Single-Source Deep Unsupervised Visual Domain Adaptation
 category: AI
-tags: ai paper 🔥
+tags: ai paper
 ---
 
 A Review of Single-Source Deep Unsupervised Visual Domain Adaptation

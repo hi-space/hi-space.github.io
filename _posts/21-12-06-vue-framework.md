@@ -3,8 +3,6 @@ title: "[Vue] Framework (vuetify, bootstrap)"
 tags: vue
 ---
 
-<!--more-->
-
 # Vuetify
 
 ```sh
@@ -16,6 +14,8 @@ vue add vuetify
 ```sh
 npm install vue bootstrap-vue bootstrap
 ```
+
+<!--more-->
 
 ### `main.js`
 

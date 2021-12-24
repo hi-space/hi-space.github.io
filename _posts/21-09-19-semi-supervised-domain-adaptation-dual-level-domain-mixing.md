@@ -1,7 +1,7 @@
 ---
 title: Semi-supervised Domain Adaptation based on Dual-level Domain Mixing for Semantic Segmentation
 category: AI
-tags: ai paper 🔥
+tags: ai paper
 article_header:
     type: overlay
     theme: dark

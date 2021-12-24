@@ -1,6 +1,6 @@
 ---
 title: 💡 Reference Paper
-tags: paper 💡 🔥
+tags: paper 💡
 ---
 
 <!--more-->

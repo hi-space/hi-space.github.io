@@ -1,6 +1,6 @@
 ---
 title: 💡 Paper Backup
-tags: paper 💡 🔥
+tags: paper 💡
 mathjax_autoNumber: false
 ---
 

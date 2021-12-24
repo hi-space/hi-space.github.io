@@ -1,7 +1,7 @@
 ---
 title: Semi-supervised learning
 category: AI
-tags: ai 🔥
+tags: ai
 article_header:
     type: overlay
     theme: dark

@@ -1,7 +1,7 @@
 ---
 title: Knowledge Distillation
 category: AI
-tags: ai paper 🔥
+tags: ai paper
 ---
 
 Knowledge Distillation는 Distilling the Knowlege in a Neural Network (NIPS 2014 Workshop) 에서 처음 제안된 개념이다. 기존의 앙사블의 거대하고 큰 모델에서 예측된 확률을 Pseudo label로 사용하는 방법이다. 

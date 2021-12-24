@@ -1,7 +1,7 @@
 ---
 title: Unsupervised Domain Adaptation for Semantic Segmentation via Class-Balanced Self-Training
 category: AI
-tags: ai paper 🔥
+tags: ai paper
 cover: /assets/images/21-10-15-uda-for-ss-class-balance-self-training-2021-10-16-09-38-11.png
 ---
 

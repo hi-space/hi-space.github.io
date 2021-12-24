@@ -1,7 +1,7 @@
 ---
 title: Semi-supervised Models are Strong Unsupervised Domain Adaptation Learners
 category: AI
-tags: ai paper 🔥
+tags: ai paper domain-adaptation
 cover: /assets/images/21-11-04-ss-model-strong-udp-2021-11-04-16-43-55.png
 ---
 

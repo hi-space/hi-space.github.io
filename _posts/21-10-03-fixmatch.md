@@ -1,7 +1,7 @@
 ---
 title: Simplifying Semi-Supervised Learning with Consistency and Confidence (FixMatch)
 category: AI
-tags: ai paper 🔥
+tags: ai paper
 article_header:
     type: overlay
     theme: dark
