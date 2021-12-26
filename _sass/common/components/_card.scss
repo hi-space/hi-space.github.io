@@ -31,10 +31,15 @@
 .card__image {
   position: relative;
   width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   & > img {
     display: block;
     width: 100%;
-    height: auto;
+    height: 180px;
+    // height: auto;
     border-radius: inherit;
   }
   & > .overlay {
