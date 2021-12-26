@@ -238,7 +238,21 @@ defaults:
       path: ""
       type: project
     values:
-      show_date: true
+      layout: article
+      license: true
+      show_date: false
+      aside:
+        toc: true
+      mode: immersive
+      header:
+        theme: dark
+      article_header:
+        type: overlay
+        theme: dark
+        background_color: "#203028"
+        background_image:
+          gradient: 'linear-gradient(135deg, rgba(32, 48, 40 , .8), rgba(32, 48, 40, .6))'
+          src: false
 
 ## => Plugins
 ##############################
