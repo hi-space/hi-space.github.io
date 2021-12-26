@@ -112,7 +112,7 @@
         <div class="cell cell--12 cell--md-4 cell--lg-3">
           <div class="card card--flat">
             {%- if _article.cover -%}
-              <div class="card__image">
+              <div class="card__image" onclick="location.href ='{{ _article_url }}'" style="cursor: pointer;">
                 <img class="image" src="{{ _article_cover }}" />
                 <div class="overlay overlay--bottom">
                   <header>
@@ -121,7 +121,7 @@
                 </div>
               </div>
             {%- endif -%}
-            </div>
+          </div>
         </div>
       {%- else -%}
 
