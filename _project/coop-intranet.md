@@ -20,10 +20,6 @@ article_header:
 ## 지원 기능
 
 ![](/assets/images/project/coop-intranet-login.png)
-![](/assets/images/project/coop-intranet-system-layer.png)
-![](/assets/images/project/coop-intranet-system-overall.png)
-![](/assets/images/project/coop-intranet-user-interface.png)
-![](/assets/images/project/coop-intranet-system-infra.png)
 ![](/assets/images/coop-intranet-schedule.png)
 ![](/assets/images/project/coop-intranet-schedule-register.png)
 
