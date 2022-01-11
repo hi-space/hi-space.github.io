@@ -69,10 +69,18 @@ prompt_context() {
 brew install zsh-syntax-highlighting
 
 # vi ~/.zshrc
-source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh 
+source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh # case of M1
 ```
 
-#### 2-3. Status bar
+#### 2-3. Autosuggestion
+
+```sh
+brew reinstall zsh-autosuggestions
+source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh # case of M1
+```
+
+#### 2-4. Status bar
 
 - `Preferences` - `Profiles` - `Session` - `Status bar enabled` 체크
 - `Preferences` - `Appearance` - `Status bar location` 위치 선택
