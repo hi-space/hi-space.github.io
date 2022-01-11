@@ -6,11 +6,17 @@ tags: ubuntu env kubernetes backend
 ## Install
 
 ```sh
+# Ubuntu
 sudo apt install apt-transport-https
 curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key add
 echo "deb https://apt.kubernetes.io/ kubernetes-xenial main" | sudo tee -a /etc/apt/sources.list.d/kubernetes.list
 sudo apt update
 sudo apt install kubelet kubeadm kubectl kubernetes-cni
+
+# Mac
+curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/darwin/arm64/kubectl"
+# or
+brew install kubectl
 ```
 
 ### Check
