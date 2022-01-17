@@ -23,7 +23,6 @@ article_header:
 ![](/assets/images/project/coop-intranet-schedule.png)
 ![](/assets/images/project/coop-intranet-schedule-register.png)
 
-
 #### 1. 사용자관리
 
 - 관리자 계정 로그인 시, 사용자 추가 및 관리 기능

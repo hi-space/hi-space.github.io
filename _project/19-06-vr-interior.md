@@ -17,31 +17,55 @@ article_header:
 
 ## 지원 기능
 
-#### 1. 맵 제작 및 선택 (2가지)
+#### 1. 맵 제작 및 선택 (헬스장 / 음악 스튜디오)
 
-![](/assets/images/project/vr-interior-main-menu.png)
-
-![](/assets/images/project/vr-interior-gym.png)
-
-![](/assets/images/project/vr-interior-studio.png)
-
-헬스장 / 음악 스튜디오
+<div class="grid-container">
+  <div class="grid grid--px-2 grid--py-1">
+    <div class="cell cell--12">
+      <img src="/assets/images/project/vr-interior-main-menu.png"/>
+    </div>
+    <div class="cell cell--6">
+      <img src="/assets/images/project/vr-interior-gym.png"/>
+    </div>
+    <div class="cell cell--6">
+      <img src="/assets/images/project/vr-interior-studio.png"/>
+    </div>
+  </div>
+</div>
 
 #### 2. 객체 선택 및 배치
 
-![](/assets/images/project/vr-interior-gym-menu.png)
-![](/assets/images/project/vr-interior-gym-place.png)
-
-![](/assets/images/project/vr-interior-studio-menu.png)
-![](/assets/images/project/vr-interior-studio-place.png)
+<div class="grid-container">
+  <div class="grid grid--px-2 grid--py-1">
+    <div class="cell cell--6">
+      <img src="/assets/images/project/vr-interior-gym-menu.png"/>
+    </div>
+    <div class="cell cell--6">
+      <img src="/assets/images/project/vr-interior-gym-place.png"/>
+    </div>
+    <div class="cell cell--6">
+      <img src="/assets/images/project/vr-interior-studio-menu.png"/>
+    </div>
+    <div class="cell cell--6">
+      <img src="/assets/images/project/vr-interior-studio-place.png"/>
+    </div>
+  </div>
+</div>
 
 리스트 중 원하는 객체 선택 및 공간 배치
 
 #### 3. 측량 정보
 
-![](/assets/images/project/vr-interior-measure.png)
-
-![](/assets/images/project/vr-interior-studio-measure.png)
+<div class="grid-container">
+  <div class="grid grid--px-2 grid--py-1">
+    <div class="cell cell--6">
+      <img src="/assets/images/project/vr-interior-measure.png"/>
+    </div>
+    <div class="cell cell--6">
+      <img src="/assets/images/project/vr-interior-studio-measure.png"/>
+    </div>
+  </div>
+</div>
 
 두 포인트 사이의 값 측량
 
