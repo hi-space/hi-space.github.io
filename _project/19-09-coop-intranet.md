@@ -20,7 +20,7 @@ article_header:
 ## 지원 기능
 
 ![](/assets/images/project/coop-intranet-login.png)
-![](/assets/images/coop-intranet-schedule.png)
+![](/assets/images/project/coop-intranet-schedule.png)
 ![](/assets/images/project/coop-intranet-schedule-register.png)
 
 
