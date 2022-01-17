@@ -9,7 +9,7 @@ key: page-about-detail
 # About
 
 - Autonomous Driving Software Developer
-- Learning Vision-based AI
+- Learning vision-based AI
 - Interested in XR
 - Sometimes do the Web
 
@@ -27,7 +27,7 @@ key: page-about-detail
 
 ---
 
-> 🤖 **AI** | 🥽 **XR** | 🌐 **Web / App** | 🖥️ **Windows**
+> 🤖 **AI / Data** | 🥽 **XR** | 🌐 **Web / App** | 🖥️ **Windows**
 
 ### Presentations
 
@@ -47,10 +47,10 @@ key: page-about-detail
 
 ### Outside Projects
 
-- 🤖 Unsupervised domain adaptation with semi-supervised learning for semantic segmentation <small> (21.01. - 21.11.) </small>
+- 🤖 Domain adaptation with semi-supervised learning for semantic segmentation <small> (21.01. - 21.11.) </small>
 - 🌐 Smart Farm IoT Solution <small> (21.01. - 21.03.) </small>
 - 🥽 AR Relay Video App <small> (20.09. - 20.11.) </small>
-- 🤖 Face Filter App <small> (20.09. - 20.11.) </small>
+- 🤖 AI Face Filter App <small> (20.09. - 20.11.) </small>
 - 🤖 Image Style Transfer using CNN <small> (20.06. - 20.08.) </small>
 - 🥽 VR Interior App <small> (20.01. - 20.03.) </small>
 - 🌐 Design Studio ERP System <small> (19.09. - 19.12.) </small>
@@ -61,4 +61,4 @@ key: page-about-detail
 
 # Contacts
 
-Please contact me on [Email]() or [LinkedIn](https://www.linkedin.com/in/yoo-lee/).
+Please contact me on [Email](mailto:hispace.j@gmail.com) or [LinkedIn](https://www.linkedin.com/in/yoo-lee/).
