@@ -48,11 +48,11 @@ key: page-about
 ### Presentations
 
 - 🥽 청주대학교 AR/VR 특강 <small>(21.10.)</small>
-- 🥽 서울문화재단 뉴미디어 기술 지원 사업 강연 <small>(21.04.)</small>
+- 🥽 서울문화재단 뉴미디어 기술 AR 강연 <small>(21.04.)</small>
 
 ### Contests
 
-- 🥽 문화기술 공공콘텐츠 전시 <small> (20.10.) </small>
+- 🥽 문화기술 공공콘텐츠 AR 부문 전시 <small> (20.10.) </small>
 - 🥽 YONSEI 스타트업 LAB 컨테스트 대상 <small> (20.08.) </small>
 - 🤖 Korea Clinical Datathon 2019 최우수상 <small> (19.09.) </small>
 - 🤖 Naver AI Rush <small> (19.08.) </small>
