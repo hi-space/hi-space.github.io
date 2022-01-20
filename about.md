@@ -47,7 +47,7 @@ key: page-about
 
 ### Outside Projects
 
-- 🌐 Feed  <small> (21.11. - 21.11.) </small>
+- 🌐 Startup Feed  <small> (21.11. - 21.11.) </small>
 - 🤖 Domain adaptation with semi-supervised learning for semantic segmentation <small> (21.01. - 21.11.) </small>
 - 🌐 Smart Farm IoT Solution <small> (21.01. - 21.03.) </small>
 - 🥽 AR Relay Video App <small> (20.09. - 20.11.) </small>
