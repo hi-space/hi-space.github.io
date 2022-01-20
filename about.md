@@ -25,6 +25,22 @@ key: page-about
   - Simulation for Autonomous-driving Car <small> (17.09. - 18.06.) </small>
   - 3D Indoor Scanner & VR Home Furnishing <small> (16.01. - 17.03.) </small>
 
+### Skils
+
+- Backend
+  - Flask, Django, Node.js, Spring, Go
+  - REST, gRPC, ZMQ, MQTT
+  - Docker, Kubernetes
+  - AWS
+- AI
+  - Python, Pytorch
+- 3D / XR
+  - Unreal, Unity
+- Frontend
+  - Vue.js
+- App
+  - Flutter
+
 ---
 
 > 🤖 **AI / Data** | 🥽 **XR** | 🌐 **Web / App** | 🖥️ **Windows**
