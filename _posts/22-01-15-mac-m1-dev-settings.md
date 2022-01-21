@@ -18,6 +18,13 @@ npm -version
 npm install -g yarn
 ```
 
+# Python
+
+```sh
+wget https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-MacOSX-arm64.sh
+bash Miniforge3-MacOSX-arm64.sh 
+```
+
 # Jekyll
 
 ```sh
