@@ -26,6 +26,18 @@ Connected Device가 쉽고 안전하게 클라우드 애플리케이션 및 다�
 
 ![gcp iot edge](/assets/images/22-02-05-edge-cloud-system-iot-core.jpeg)
 
+- Device Manager
+  - Device identity management 
+  - Support for configuring, updating, and controlling individual devices
+  - Role-level access control
+  - Console and APIs for device deployment and monitoring
+
+- Protocol Bridge
+  - Device와 GCP를 연결하기 위한 bridge (MQTT, HTTP 지원)
+  - Bi-directional messaging
+  - Automatic load balancing
+  - Global data access with Pub/Sub
+
 <!--more-->
 
 # References
