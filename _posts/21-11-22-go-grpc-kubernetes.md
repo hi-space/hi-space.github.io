@@ -1,5 +1,5 @@
 ---
-title: "[K8s] go grpc kubernetes"
+title: "k8s 세팅: go + grpc"
 tags: go k8s
 ---
 
