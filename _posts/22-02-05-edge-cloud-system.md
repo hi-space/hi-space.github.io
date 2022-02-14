@@ -3,10 +3,15 @@ title: Edge Cloud System
 tags: cloud iot
 ---
 
-IoT 디바이스에서 수집되는 데이터를 이용해 클라우드에서 처리하기 위해서 Edge device와 Edge Clous Service와 연동하는 시스템 구조가 필요하다.
+![](/assets/images/22-02-05-edge-cloud-system-edge-cloud-system.png)
+
+대량의 센서 데이터 처리, 대량 데이터의 배치 프로세싱, 장기간 데이터에 대한 통계 분석 등의 경우에 Edge에서 처리하기가 어렵기 때문에 Edge computing과 Cloud computing이 상호 연동되어 데이터를 처리해야 한다.
+
+IoT 디바이스에서 수집되는 데이터를 이용해 클라우드에서 처리하기 위해서는 Edge device와 Edge Clous Service와 연동하는 시스템 구조가 필요하다. 
 
 AWS에서는 IoT Core, GCP 에서는 IoT Edge 라는 이름으로 서비스를 제공하고 있다.
 
+<!--more-->
 ### IoT Edge
 
 - Sensor: 디바이스에서 얻어지는 센서 데이터들을 클라우드로 publish
@@ -37,8 +42,6 @@ Connected Device가 쉽고 안전하게 클라우드 애플리케이션 및 다�
   - Bi-directional messaging
   - Automatic load balancing
   - Global data access with Pub/Sub
-
-<!--more-->
 
 # References
 
