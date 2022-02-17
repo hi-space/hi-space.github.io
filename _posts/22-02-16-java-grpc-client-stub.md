@@ -1,5 +1,5 @@
 ---
-title: gRPC 클라이언트 Stub
+title: JAVA gRPC 클라이언트 Stub
 tags: java grpc 
 ---
 
