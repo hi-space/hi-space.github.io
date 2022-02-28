@@ -27,7 +27,7 @@ tar -C /usr/local -xzf go1.17.3.linux-amd64.tar.gz
 export PATH=$PATH:/usr/local/go/bin
 ```
 
-# 1. Test Codes
+### 1. Test Codes
 
 ```sh
 # vi test.go
@@ -37,7 +37,7 @@ func main() {
 }
 ```
 
-# 2. Run
+### 2. Run
 
 `run` 명령어를 사용하면 컴파일과 동시에 실행하게 된다. 이 때 실행파일은 만들어지지 않는다.
 
@@ -45,10 +45,32 @@ func main() {
 go run test.go
 ```
 
-# 3. Build
+### 3. Build
 
 ```sh
 go build test.go
 ```
 
 빌드를 하게 되면 실행파일이 생성된다. 실행파일을 실행시키면 컴파일이 된 결과물을 실행하게 된다.
+
+---
+
+# Methods vs Receiver
+
+Go는 클래스가 없지만 Receiver라는 개념을 사용해 특정 타입에 대한 메소드를 만들 수 있다.
+
+- 함수(function) - 처리의 묶음
+- 객체(object) - 변수의 묶음
+- 구조체(struct) - 객체를 선언하는 방법
+- 리시버(reciever) - 객체와 함수를 연결하는 매개체
+- 메소드(method) - 객체에 연결된 함수
+- value receiver - 객체를 value로 가져와서 사용하는 리시버
+- pointer receiver - 객체를 referene(pointer)로 가져와서 사용하는 리시버
+
+# References
+
+- [Efective Go in Korean](https://gosudaweb.gitbooks.io/effective-go-in-korean/content/)
+- [Go by Example](https://mingrammer.com/gobyexample/)
+- [golang docs](https://github.com/golang-kr/golang-doc/wiki)
+- [가장 빨리 만나는 Go 언어](http://pyrasis.com/go.html)
+- 
