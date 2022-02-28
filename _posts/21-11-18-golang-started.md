@@ -67,10 +67,44 @@ Go는 클래스가 없지만 Receiver라는 개념을 사용해 특정 타입에
 - value receiver - 객체를 value로 가져와서 사용하는 리시버
 - pointer receiver - 객체를 referene(pointer)로 가져와서 사용하는 리시버
 
+# Constructor & Factory
+
+```go
+type Person struct {
+    name string
+    age  int
+}
+
+func NewPerson(name string) *Person {
+    return &Person{
+        name: name,
+    }
+}
+
+person := NewPerson("John Doe")
+```
+
+# Channel
+
+- 데이터를 주고 받는 통로
+- goroutine 간 메시지리를 전달할 수 있는 메시지 큐
+- 상대편이 준비될 때 까지 채널에서 대기함 (데이터 동기화)
+
+```go
+// create channel instance
+var msg chan string = make (chan string)
+
+// send msg
+msg <- "sending message"
+
+// receive msg
+var msg string = <- msg
+```
+
 # References
 
 - [Efective Go in Korean](https://gosudaweb.gitbooks.io/effective-go-in-korean/content/)
 - [Go by Example](https://mingrammer.com/gobyexample/)
 - [golang docs](https://github.com/golang-kr/golang-doc/wiki)
 - [가장 빨리 만나는 Go 언어](http://pyrasis.com/go.html)
-- 
+- [예제로 배우는 Go 프로그래밍](http://golang.site/go/article/1-Go-%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D-%EC%96%B8%EC%96%B4-%EC%86%8C%EA%B0%9C)
