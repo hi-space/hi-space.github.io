@@ -1,6 +1,6 @@
 ---
 title: Edge Cloud System
-tags: cloud iot
+tags: cloud iot architecture
 ---
 
 ![](/assets/images/22-02-05-edge-cloud-system-edge-cloud-system.png)
