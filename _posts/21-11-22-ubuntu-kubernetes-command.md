@@ -1,5 +1,5 @@
 ---
-title: "[Ubuntu] kubernetes 설치"
+title: "[Ubuntu] kubernetes 설치 & 명령어"
 tags: ubuntu env kubernetes backend
 ---
 
@@ -52,6 +52,12 @@ kubectl logs -f {pod-name}
 
 ```sh
 kubectl exec {pod-name} -it bash
+```
+
+#### 설정 적용
+
+```sh
+kubectl apply -f {}
 ```
 
 # References
