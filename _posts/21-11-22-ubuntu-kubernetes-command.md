@@ -60,6 +60,21 @@ kubectl exec {pod-name} -it bash
 kubectl apply -f {}
 ```
 
+#### 전체 Container 리스트
+
+```sh
+kubectl get pods --all-namespaces -o jsonpath="{..image}" |\
+tr -s '[[:space:]]' '\n' |\
+sort |\
+uniq -c
+```
+
+#### Container ID, Docker 이미지 확인
+
+```sh
+kubectl get pods --all-namespaces -o jsonpath='{range .items[*]}{"pod: "}{.metadata.name}{"\n"}{range .status.containerStatuses[*]}{"\tname: "}{.containerID}{"\n\timage: "}{.image}{"\n"}{end}'
+```
+
 # References
 
 - [https://zzsza.github.io/development/2019/01/11/kubernetes-and-deployment/](https://zzsza.github.io/development/2019/01/11/kubernetes-and-deployment/)
