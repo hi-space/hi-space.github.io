@@ -24,8 +24,8 @@ tar -C /usr/local -xzf go1.17.3.linux-amd64.tar.gz
 
 ```sh
 # ~/.bashrc
-export GOROOT=/usr/local/go
-export GOPATH=$HOME/env/go
+export GOROOT=/usr/local/go # 시스에 설치된 GO 패키지 위치
+export GOPATH=$HOME/env/go  # 작업 디렉토리
 export PATH=$GOPATH/bin:$GOROOT/bin:$PATH
 export PATH=$PATH:$GOPATH/bin:/opt/protoc/bin
 ```
