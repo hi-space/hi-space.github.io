@@ -1,6 +1,6 @@
 ---
 title: "[Ubuntu] kubernetes 설치 & 명령어"
-tags: ubuntu env kubernetes backend
+tags: ubuntu env k8s backend
 ---
 
 ## Install
