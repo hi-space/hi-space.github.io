@@ -66,3 +66,4 @@ systemctl --user restart periodic-task.timer
 # References
 
 - [systemd service timer 예제](https://twpower.github.io/213-systemd-timer-example)
+- [systemctl 명령어](https://www.lesstif.com/system-admin/systemd-system-daemon-systemctl-24445064.html)
