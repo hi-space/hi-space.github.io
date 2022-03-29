@@ -63,6 +63,14 @@ systemctl start periodic-task.timer
 systemctl --user restart periodic-task.timer
 ```
 
+## 4. 관련 커맨드
+
+```sh
+systemctl status {service-name}.service # 상태
+systemctl -l status {service-name}.service # 로그
+journalctl -xefu {service-name}.service # tail log
+```
+
 # References
 
 - [systemd service timer 예제](https://twpower.github.io/213-systemd-timer-example)
