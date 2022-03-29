@@ -24,7 +24,10 @@ tar -C /usr/local -xzf go1.17.3.linux-amd64.tar.gz
 
 ```sh
 # ~/.bashrc
-export PATH=$PATH:/usr/local/go/bin
+export GOROOT=/usr/local/go
+export GOPATH=$HOME/env/go
+export PATH=$GOPATH/bin:$GOROOT/bin:$PATH
+export PATH=$PATH:$GOPATH/bin:/opt/protoc/bin
 ```
 
 ### 1. Test Codes
