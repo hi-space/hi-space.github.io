@@ -160,7 +160,7 @@ analytics:
 
   ## Google Analytics
   google:
-    tracking_id: # Google Analytics id for the site
+    tracking_id: G-L2P18YV3P3
     anonymize_ip: false # Anonymize IP tracking for Analytics
 
 ## => Build
