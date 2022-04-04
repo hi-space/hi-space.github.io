@@ -9,7 +9,7 @@ key: page-about
 # About
 
 - Autonomous Driving Software Developer
-- Learning vision-based AI
+- Studying vision-based AI
 - Interested in XR
 - Sometimes do the Web
 
@@ -18,23 +18,23 @@ key: page-about
 - Intelligence Research, Kakao Mobility <small>(21.09. - )</small>
 
 - Samsung Research, Samsung Electronics <small>(15.01. - 21.09.)</small>
-  - Serivce App for Serving Robot <small> (21.02. - 21.09.) </small>
-  - AI Monitoring Camera <small> (20.01. - 21.02.) </small>
+  - Robotics Application <small> (21.02. - 21.09.) </small>
+  - AI IoT Camera <small> (20.01. - 21.02.) </small>
   - RL Simulation Framework <small> (19.01. - 19.12.) </small>
-  - AI Data Simulation to generate synthetic data <small> (18.09. - 19.12.) </small>
-  - Simulation for Autonomous-driving Car <small> (17.09. - 18.06.) </small>
+  - AI Data Simulation <small> (18.09. - 19.12.) </small>
+  - Autonomous-driving Car Simulation <small> (17.09. - 18.06.) </small>
   - 3D Indoor Scanner & VR Home Furnishing <small> (16.01. - 17.03.) </small>
 
 ### Skils
 
 - Backend
-  - Flask, Django, Node.js, Spring, Go
+  - Django, Flask, Node.js, Spring
   - REST, gRPC, ZMQ, MQTT
   - Docker, Kubernetes
   - AWS
-- AI
-  - Python, Pytorch
-- 3D / XR
+- AI & Data Engineering
+  - Pytorch, Python
+- XR / 3D
   - Unreal, Unity
 - Frontend
   - Vue.js
@@ -49,6 +49,7 @@ key: page-about
 
 - 🥽 청주대학교 AR/VR 특강 <small>(21.10.)</small>
 - 🥽 서울문화재단 뉴미디어 기술 AR 강연 <small>(21.04.)</small>
+- 🤖 카카오모빌리티 자율주행 서비스 플랫폼 연사 <small>(22.02.)</small>
 
 ### Contests
 
@@ -63,16 +64,16 @@ key: page-about
 
 ### Outside Projects
 
-- 🌐 Startup Feed  <small> (21.11. - 21.11.) </small>
+- 🌐 스타트업 투자 정보 모아보기  <small> (21.11. - 21.11.) </small>
 - 🤖 Domain adaptation with semi-supervised learning for semantic segmentation <small> (21.01. - 21.11.) </small>
-- 🌐 Smart Farm IoT Solution <small> (21.01. - 21.03.) </small>
-- 🥽 AR Relay Video App <small> (20.09. - 20.11.) </small>
-- 🤖 AI Face Filter App <small> (20.09. - 20.11.) </small>
-- 🤖 Image Style Transfer using CNN <small> (20.06. - 20.08.) </small>
-- 🥽 VR Interior App <small> (20.01. - 20.03.) </small>
-- 🌐 Design Studio ERP System <small> (19.09. - 19.12.) </small>
-- 🖥️ Self Photo Booth <small> (19.06. - 19.08.) </small>
-- 🤖 Autonomous-driving Bicycle <small> (14.01. - 14.12.) </small>
+- 🌐 스마트팜 IoT 솔루션 <small> (21.01. - 21.03.) </small>
+- 🥽 AR 숏폼 비디오 앱 <small> (20.09. - 20.11.) </small>
+- 🤖 AI 얼굴 인식기반의 필터 앱 <small> (20.09. - 20.11.) </small>
+- 🤖 CNN을 이용한 Image Style Transfer <small> (20.06. - 20.08.) </small>
+- 🥽 VR 인테리어 앱 <small> (20.01. - 20.03.) </small>
+- 🌐 스튜디오 ERP 시스템 <small> (19.09. - 19.12.) </small>
+- 🖥️ 포토부스 프로그램 <small> (19.06. - 19.08.) </small>
+- 🤖 자율주행 자전거 <small> (14.01. - 14.12.) </small>
 
 ---
 
