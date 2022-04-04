@@ -19,8 +19,6 @@ article_header:
 
 ![](/assets/images/project/20-09-smart-ai-cctv-architecture.png)
 
-![](/assets/images/project/20-09-smart-ai-cctv-app.png)
-
 ### 개발 내용
 
 - 안드로이드 앱 개발
