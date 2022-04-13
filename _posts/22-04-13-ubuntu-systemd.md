@@ -119,6 +119,11 @@ journalctl -xefu {service-name}.service # tail log
 ```
 
 - systemctl의 `-l`: 로그 항목을 ...으로 자르지 않고 전체를 보여주겠다는 옵션이다.
-- journalctl `-xe`: 추가적인 메시지(에러 or 이벤트)와 함께 로그의 가장 끝 부분 확인
+- journalctl `-x`: 추가적인 메시지(에러 or 이벤트) 표시
+- journalctl `-e`: 로그의 가장 끝 부분 확인
 - journal `-u`: 특정 unit의 로그 확인
 - journal `-f`: 로그를 계속 확인하며 트래킹
+- journal `-n`: 최근 n 개의 메시지만 표시
+- journal `--since`, `--until`: 특정 기간내의 메시지 확인
+  - ex) `journalctl --since 2020-01-09 --until yesterday`
+  - ex) `journalctl --since "-2hour" --until "10min"`
