@@ -8,22 +8,10 @@ key: page-about
 
 # About
 
-- Autonomous Driving Software Developer
+- AI Engineer + MLOps Engineer
 - Studying vision-based AI
 - Interested in XR
 - Sometimes do the Web
-
-### Career
-
-- Intelligence Research, Kakao Mobility <small>(21.09. - )</small>
-
-- Samsung Research, Samsung Electronics <small>(15.01. - 21.09.)</small>
-  - Robotics Application <small> (21.02. - 21.09.) </small>
-  - AI IoT Camera <small> (20.01. - 21.02.) </small>
-  - RL Simulation Framework <small> (19.01. - 19.12.) </small>
-  - AI Data Simulation <small> (18.09. - 19.12.) </small>
-  - Autonomous-driving Car Simulation <small> (17.09. - 18.06.) </small>
-  - 3D Indoor Scanner & VR Home Furnishing <small> (16.01. - 17.03.) </small>
 
 ### Skils
 
@@ -31,7 +19,7 @@ key: page-about
   - Django, Flask, Node.js, Spring
   - REST, gRPC, ZMQ, MQTT
   - Docker, Kubernetes
-  - AWS
+  - AWS, GCP
 - AI & Data Engineering
   - Pytorch, Python
 - XR / 3D
@@ -49,7 +37,6 @@ key: page-about
 
 - 🥽 청주대학교 AR/VR 특강 <small>(21.10.)</small>
 - 🥽 서울문화재단 뉴미디어 기술 AR 강연 <small>(21.04.)</small>
-- 🤖 카카오모빌리티 자율주행 서비스 플랫폼 연사 <small>(22.02.)</small>
 
 ### Contests
 

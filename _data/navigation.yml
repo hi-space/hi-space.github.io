@@ -3,7 +3,7 @@ header:
     url:        /
   - title:      Tags
     url:        /archive.html
-  - title:      Projects
-    url:        /project.html
+  # - title:      Projects
+  #   url:        /project.html
   - title:      About
     url:        /about.html
