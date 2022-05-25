@@ -75,3 +75,4 @@ journalctl -xefu {service-name}.service # tail log
 
 - [systemd service timer 예제](https://twpower.github.io/213-systemd-timer-example)
 - [systemctl 명령어](https://www.lesstif.com/system-admin/systemd-system-daemon-systemctl-24445064.html)
+- [systemd란? systemd unit파일 작성 방법](https://kim-dragon.tistory.com/202)
