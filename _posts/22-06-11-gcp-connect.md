@@ -37,7 +37,7 @@ sudo mkfs.ext4 -m 0 -E lazy_itable_init=0,lazy_journal_init=0,discard /dev/sdb
 
 # /mnt/disks/sdb로 마운트
 sudo mkdir -p /mnt/disks/sdb
-sudo mount -o discard,defaults /dev/sdb /mnt/disks/sdb
+sudo mount -o discard,defaults /dev/sdb /home/evelyn_hi/data
 
 # 권한 추가
 sudo chmod a+w /mnt/disks/sdb
