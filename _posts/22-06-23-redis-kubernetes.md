@@ -69,3 +69,10 @@ spec:
           path: redis.conf
 
 ```
+
+config map을 통해 redis 설정하고, 다른 pod에서도 사용 가능하도록 서비스 노출
+
+### References
+
+- [컨피그맵을 사용해서 Redis 설정하기](https://kubernetes.io/ko/docs/tutorials/configuration/configure-redis-using-configmap/)
+- [Deploying Redis Cluster on Kubernetes](https://www.containiq.com/post/deploy-redis-cluster-on-kubernetes)
