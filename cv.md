@@ -13,14 +13,15 @@ key: page-about
 
 ## Career
 
-&nbsp; &nbsp; **21.09. -** &nbsp; 카카오모빌리티, 자율주행 SW팀 <small>(Senior SW Engineer) </small>
+&nbsp; &nbsp; **21.09. -** &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  카카오모빌리티, 자율주행 SW팀 <small>(Senior SW Engineer) </small>
 
 &nbsp; &nbsp; **15.01. - 21.09.** &nbsp; 삼성전자, Samsung Research <small>(SW Engineer) </small>
 
-## 주요 경력
+## Work Experience
 
-- **22.09.-** &nbsp; 자율주행 서비스 플랫폼 <small> (Kakao Mobility) </small>
+- **22.09.-** &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 자율주행 서비스 플랫폼 <small> (Kakao Mobility) </small>
   - **Project:** 자율주행차량을 사용자에게 서비스하고 데이터 기반의 알고리즘 고도화를 위한 플랫폼
+  - 플랫폼 개발 리딩
   - 자율주행차량의 택시 서비스 운영을 위한 서버 개발
   - 데이터를 수집, 분석, 처리하는 자율주행 데이터 플랫폼 설계 및 개발
   - 차량 시스템 관리 및 제어를 위한 차량 gateway 개발
@@ -46,14 +47,6 @@ key: page-about
   - **Project:** 강화학습을 위한 3D 시뮬레이션 플랫폼
   - Simulation 환경과 RL 모델 간 interaction을 위한 RL Framework 개발
   - 대규모 학습을 위한 분산 학습, 시뮬레이션 시스템 구성
-  - 학습 다양화를 위해 시뮬레이션에 Domain Randomization 적용
-  - 청소로봇의 Stuck 상황, 서빙로봇의 주행을 위한 RL모델 적용
-  - **Skills:** Python, gRPC, ZMQ, Pytorch, Unreal
-
-- **18.06.-19.12.** &nbsp; 강화학습 시뮬레이션 <small> (Samsung Electronics) </small>
-  - **Project:** 강화학습을 위한 3D 시뮬레이션 플랫폼
-  - Simulation 환경과 RL 모델 간 interaction을 위한 RL Framework 개발
-  - Simulation 환경 정보와 실시간 학습데이터 로깅 및 시각화를 위한 Dashboard 개발
   - 학습 다양화를 위해 시뮬레이션에 Domain Randomization 적용
   - 청소로봇의 Stuck 상황, 서빙로봇의 주행을 위한 RL모델 적용
   - **Skills:** Python, gRPC, ZMQ, Pytorch, Unreal
@@ -95,9 +88,7 @@ key: page-about
   - Crowdsourcing을 통해 수집된 경로 데이터를 이용해 목적지까지의 경로를 추천 및 안내하는 자전거 네비게이션 용 Android Application (경로 데이터 Clustering & Classification)
   - **Skills:** OpenCV, C++, Rasberry pi, Android, Django
 
-
-
-## 기타 경력
+## Other Experience
 
 - **21.11. - 21.11.** &nbsp; 스타트업 투자 정보 크롤링 웹페이지 개발
   - 주기적으로 스타트업 투자 정보들을 크롤링하고 그 결과들을 웹페이지에서 확인 및 관리할 수 있는 웹페이지
@@ -124,7 +115,7 @@ key: page-about
   - DSLR로 사용자의 네컷 사진을 찍고 필터를 적용하여 인쇄하는 Windows 어플리케이션. 사진 촬영, 필터 적용, 히스토리 관리, 사진 인쇄 기능을 제공
   - **Skills:** WPF, C#, OpenCV, Canon SDK
 
-## 수상 및 전시
+## Honors and Awards
 
 - **22.02.** &nbsp; 카카오모빌리티 컨퍼런스 발표 <small> (자율주행 서비스 플랫폼) </small>
 - **21.10.** &nbsp; 청주대학교 AR/VR 특강
