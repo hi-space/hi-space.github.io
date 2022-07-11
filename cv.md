@@ -23,6 +23,7 @@ key: page-about
   - **Project:** 자율주행차량을 사용자에게 서비스하고 데이터 기반의 알고리즘 고도화를 위한 플랫폼
   - 자율주행차량의 택시 서비스 운영을 위한 서버 개발
   - 데이터를 수집, 분석, 처리하는 자율주행 데이터 플랫폼 설계 및 개발
+  - 차량 시스템 관리 및 제어를 위한 차량 gateway 개발
   - 카메라 영상 기반의 Object Detection 모델 개발
   - **Skills:** Go, gRPC, Spring, GCP, Pytorch
 
