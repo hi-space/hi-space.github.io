@@ -47,9 +47,15 @@ cd ~/.config/systemd/user/system-name.service
 - `ExecStopPost` : 서비스 종료 명령 이후에 실행할 명령을 설정
 - `ExecReload` : 서비스가 reload 될때 필요한 명령어나 스크립트를 지정
 - `KillMode` : 프로세스가 어떻게 중지 되는지 결정함
-- `Restart` : on-failure는 어떤 문제로 인해 0이아닌 Exit코드를 보여주고 중지될 경우 서비스를 다시시작, 반대로 on-success는 프로세스가 아무런 문제없이 Exit코드가 0인 경우 다시 그 서비스를 시작하라는 의미
+- `Restart` : on-failure는 어떤 문제로 인해 0이아닌 Exit코드를 보여주고 중지될 경우 서비스를 다시시작, 반대로 on-success는 프로세스가 아무런 문제없이 Exit코드가 0인 경우 다시 그 서비스를 시작하라는 의미 [no|on-success|on-failure|on-watchdog|on-abort|always]
+  - `no`: 유닛을 다시 시작하지 않는다
+  - `on-success`: 유닛이 정상적으로 종료되었을 때만 재시작. 종료시에 "0" 값을 리턴하여 종료되었거나 SIGHUP, SIGINT, SIGTERM, SIGPIPE 등과 같은 시그널 또는 "SuccessExitStatus=" 설정에서 지정된 리턴 코드 목록에 따른 시그널에 대해서 모두 성공으로 인식해 재시작
+  - `on-failure`: 유닛이 비정상적으로 종료되었을때 재시작한다. 리턴값이 "0" 이 아닌 경우, core dump 와 같이 비정상적인 시그널을 받고 종료된 경우, 타임 아웃값내 응답이 없는 경우 등일때 재시작
+  - `on-watchdog`: `WatchdogSec=` 에 설정된 시간내 응답이 없는 경우에만 재시작
+  - `on-abort`: 지정되지 않은 리턴값을 받은 경우 재시작
+  - `always`: 종료 상태 등과 무관하게 무조건 재시작한다. (사용자가 중지해도 시스템이 다시 띄워짐)
 - `RestartSec` : 서비스를 다시 시작하기전에 이 시간동안 서비스를 Sleep상태로 두라는 의미
-- `RemainAfterExit` : (yes|no) 유닛이 종료 이후에도 유닛이 활성화 상태로 판단함
+- `RemainAfterExit` : 유닛이 종료 이후에도 유닛이 활성화 상태로 판단함 [yes|no]
 - `TimeoutSec` : 서비스 종료시 대기하는 시간
 
 ## Example service
